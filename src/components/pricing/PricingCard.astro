@@ -1,0 +1,86 @@
+---
+import Button from '../common/Button.astro';
+import { translations, type Language } from '../../i18n/translations';
+
+interface Props {
+  title: string;
+  price: number;
+  features: string[];
+  featured?: boolean;
+  href?: string;
+  lang?: Language;
+}
+
+const {
+  title,
+  price,
+  features,
+  featured = false,
+  href = '/contact',
+  lang = 'en',
+} = Astro.props;
+
+const common = translations.common;
+---
+
+<div
+  class={`relative rounded-2xl p-8 ${
+    featured
+      ? 'bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white shadow-xl scale-105 z-10'
+      : 'bg-white border-2 border-warm-200 hover:border-terracotta-300'
+  } transition-all duration-300`}
+>
+  {featured && (
+    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+      <span class="bg-gold-500 text-white text-sm font-medium px-4 py-1 rounded-full shadow-md">
+        Most Popular
+      </span>
+    </div>
+  )}
+
+  <div class="text-center">
+    <h3
+      class={`text-2xl font-serif font-semibold ${featured ? 'text-white' : 'text-warm-900'}`}
+    >
+      {title}
+    </h3>
+
+    <div class="mt-4 mb-6">
+      <span class={`text-4xl font-bold ${featured ? 'text-white' : 'text-terracotta-500'}`}>
+        ${price}
+      </span>
+    </div>
+  </div>
+
+  <ul class="space-y-3 mb-8">
+    {features.map((feature) => (
+      <li class="flex items-start gap-3">
+        <svg
+          class={`w-5 h-5 mt-0.5 flex-shrink-0 ${featured ? 'text-gold-300' : 'text-sage-500'}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+        <span class={featured ? 'text-white/90' : 'text-warm-600'}>
+          {feature}
+        </span>
+      </li>
+    ))}
+  </ul>
+
+  <Button
+    href={href}
+    variant={featured ? 'outline' : 'primary'}
+    size="lg"
+    class={`w-full ${featured ? 'border-white text-white hover:bg-white hover:text-terracotta-600' : ''}`}
+  >
+    {common.bookNow[lang]}
+  </Button>
+</div>

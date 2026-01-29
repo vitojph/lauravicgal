@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import Button from '../components/common/Button.astro';
+import { getCollection } from 'astro:content';
+import { translations } from '../i18n/translations';
+
+const t = translations.workshops;
+const common = translations.common;
+
+// Get workshops from content collection
+const workshopData = await getCollection('workshops');
+const workshops = workshopData.sort((a, b) => a.data.order - b.data.order);
+
+const iconPaths: Record<string, string> = {
+  users: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
+  heart: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+  'academic-cap': 'M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z',
+};
+
+const colorMap = ['terracotta', 'gold', 'sage'];
+---
+
+<Layout
+  title="Art Workshops | Laura Vicente"
+  description="Creative watercolor workshops for team building, private events, and group classes. Unleash your creativity in a fun, supportive environment."
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 watercolor-bg overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-10 -left-20 w-64 h-64 bg-terracotta-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -right-20 w-80 h-80 bg-sage-200/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container-narrow mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-warm-900">
+          <span data-lang="en">{t.pageTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageTitle.es}</span>
+        </h1>
+        <p class="mt-2 text-xl text-terracotta-500 font-medium">
+          <span data-lang="en">{t.pageSubtitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageSubtitle.es}</span>
+        </p>
+        <p class="mt-6 text-lg text-warm-600 max-w-2xl mx-auto">
+          <span data-lang="en">{t.intro.en}</span>
+          <span data-lang="es" class="hidden">{t.intro.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Workshops Grid -->
+    <section class="section-padding bg-white">
+      <div class="container-wide mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          {workshops.map((workshop, index) => {
+            const color = colorMap[index % colorMap.length];
+            const bgClass = color === 'terracotta' ? 'bg-terracotta-50' : color === 'gold' ? 'bg-gold-50' : 'bg-sage-50';
+            const borderClass = color === 'terracotta' ? 'border-terracotta-200' : color === 'gold' ? 'border-gold-200' : 'border-sage-200';
+            const iconColor = color === 'terracotta' ? 'text-terracotta-500' : color === 'gold' ? 'text-gold-500' : 'text-sage-500';
+            const iconBg = color === 'terracotta' ? 'bg-terracotta-100' : color === 'gold' ? 'bg-gold-100' : 'bg-sage-100';
+
+            return (
+              <div class={`rounded-2xl border-2 ${borderClass} ${bgClass} p-8 hover:shadow-lg transition-shadow`}>
+                <div class={`w-14 h-14 rounded-xl ${iconBg} flex items-center justify-center mb-6`}>
+                  <svg class={`w-7 h-7 ${iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={iconPaths[workshop.data.icon]} />
+                  </svg>
+                </div>
+
+                <h3 class="text-xl font-serif font-semibold text-warm-900 mb-3">
+                  <span data-lang="en">{workshop.data.title}</span>
+                  <span data-lang="es" class="hidden">{workshop.data.titleEs}</span>
+                </h3>
+
+                <p class="text-warm-600 mb-6">
+                  <span data-lang="en">{workshop.data.description}</span>
+                  <span data-lang="es" class="hidden">{workshop.data.descriptionEs}</span>
+                </p>
+
+                <ul class="space-y-2 mb-6" data-lang="en">
+                  {workshop.data.details.map((detail) => (
+                    <li class="flex items-start gap-2 text-sm text-warm-700">
+                      <svg class={`w-4 h-4 mt-0.5 flex-shrink-0 ${iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+                <ul class="space-y-2 mb-6 hidden" data-lang="es">
+                  {workshop.data.detailsEs.map((detail) => (
+                    <li class="flex items-start gap-2 text-sm text-warm-700">
+                      <svg class={`w-4 h-4 mt-0.5 flex-shrink-0 ${iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Placeholder -->
+    <section class="section-padding bg-warm-50">
+      <div class="container-wide mx-auto">
+        <div class="text-center mb-12">
+          <h2>
+            <span data-lang="en">Past Workshop Highlights</span>
+            <span data-lang="es" class="hidden">Momentos de Talleres Pasados</span>
+          </h2>
+          <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[1, 2, 3, 4].map(() => (
+            <div class="aspect-square rounded-xl bg-gradient-to-br from-warm-100 to-warm-200 flex items-center justify-center">
+              <div class="text-center p-4">
+                <svg class="w-10 h-10 mx-auto text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p class="mt-2 text-warm-500 text-xs">Workshop photo</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-gradient-to-br from-sage-500 via-sage-600 to-sage-700 text-white">
+      <div class="container-narrow mx-auto text-center">
+        <h2 class="text-white text-3xl md:text-4xl font-serif">
+          <span data-lang="en">{t.bookWorkshop.en}</span>
+          <span data-lang="es" class="hidden">{t.bookWorkshop.es}</span>
+        </h2>
+        <p class="mt-4 text-sage-100 text-lg max-w-2xl mx-auto">
+          <span data-lang="en">Let's plan a creative experience for your team, party, or group. Custom themes and packages available!</span>
+          <span data-lang="es" class="hidden">Planifiquemos una experiencia creativa para tu equipo, fiesta o grupo. Temas y paquetes personalizados disponibles!</span>
+        </p>
+        <div class="mt-8">
+          <Button href="/contact" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-sage-600">
+            <span data-lang="en">{common.getInTouch.en}</span>
+            <span data-lang="es" class="hidden">{common.getInTouch.es}</span>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<script>
+  function initLanguage() {
+    const lang = localStorage.getItem('lang') || 'en';
+    document.querySelectorAll('[data-lang]').forEach((el) => {
+      const elLang = el.getAttribute('data-lang');
+      if (elLang === lang) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+  initLanguage();
+  document.addEventListener('astro:page-load', initLanguage);
+</script>

@@ -1,0 +1,26 @@
+{
+  "tier": "personalized",
+  "title": "Personalized",
+  "titleEs": "Personalizada",
+  "price": 600,
+  "featured": true,
+  "order": 2,
+  "features": [
+    "Everything in Simple & Sweet",
+    "In-person consultation meeting",
+    "Fully customized ceremony script",
+    "Your love story incorporated",
+    "One symbolic ritual included",
+    "Rehearsal attendance",
+    "Up to 45-minute ceremony"
+  ],
+  "featuresEs": [
+    "Todo lo incluido en Simple y Dulce",
+    "Reunion de consulta en persona",
+    "Guion de ceremonia totalmente personalizado",
+    "Tu historia de amor incorporada",
+    "Un ritual simbolico incluido",
+    "Asistencia al ensayo",
+    "Ceremonia de hasta 45 minutos"
+  ]
+}

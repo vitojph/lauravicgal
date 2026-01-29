@@ -1,0 +1,174 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import PricingCard from '../components/pricing/PricingCard.astro';
+import Button from '../components/common/Button.astro';
+import { getCollection } from 'astro:content';
+import { translations } from '../i18n/translations';
+
+const t = translations.ceremonies;
+const common = translations.common;
+
+// Get ceremony packages from content collection
+const ceremonyPackages = await getCollection('ceremonies');
+const sortedPackages = ceremonyPackages.sort((a, b) => a.data.order - b.data.order);
+
+// Symbolic rituals data
+const rituals = [
+  { name: t.sandCeremony, icon: 'hourglass', color: 'terracotta' },
+  { name: t.handfasting, icon: 'ribbon', color: 'gold' },
+  { name: t.treePlanting, icon: 'plant', color: 'sage' },
+  { name: t.timeCapsule, icon: 'box', color: 'terracotta' },
+  { name: t.redThread, icon: 'thread', color: 'gold' },
+  { name: t.enamorarte, icon: 'palette', color: 'sage' },
+];
+---
+
+<Layout
+  title="Wedding Ceremonies | Laura Vicente - EnamorARTE"
+  description="Personalized bilingual wedding ceremonies in English and Spanish. Create a meaningful ceremony that celebrates your unique love story."
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 watercolor-bg overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-10 -right-20 w-64 h-64 bg-gold-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -left-20 w-80 h-80 bg-terracotta-200/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container-narrow mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="font-script text-2xl md:text-3xl text-gold-600">EnamorARTE</span>
+        <h1 class="mt-4 text-warm-900">
+          <span data-lang="en">{t.pageTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageTitle.es}</span>
+        </h1>
+        <p class="mt-6 text-xl text-warm-600 max-w-2xl mx-auto">
+          <span data-lang="en">{t.intro.en}</span>
+          <span data-lang="es" class="hidden">{t.intro.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding bg-white">
+      <div class="container-wide mx-auto">
+        <div class="text-center mb-16">
+          <h2>
+            <span data-lang="en">{t.pricingTitle.en}</span>
+            <span data-lang="es" class="hidden">{t.pricingTitle.es}</span>
+          </h2>
+          <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-start">
+          {sortedPackages.map((pkg) => (
+            <div>
+              <div data-lang="en">
+                <PricingCard
+                  title={pkg.data.title}
+                  price={pkg.data.price}
+                  features={pkg.data.features}
+                  featured={pkg.data.featured}
+                  lang="en"
+                />
+              </div>
+              <div data-lang="es" class="hidden">
+                <PricingCard
+                  title={pkg.data.titleEs}
+                  price={pkg.data.price}
+                  features={pkg.data.featuresEs}
+                  featured={pkg.data.featured}
+                  lang="es"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Symbolic Rituals Section -->
+    <section class="section-padding bg-warm-50">
+      <div class="container-wide mx-auto">
+        <div class="text-center mb-12">
+          <h2>
+            <span data-lang="en">{t.ritualsTitle.en}</span>
+            <span data-lang="es" class="hidden">{t.ritualsTitle.es}</span>
+          </h2>
+          <p class="mt-4 text-warm-600 max-w-2xl mx-auto">
+            <span data-lang="en">{t.ritualsDesc.en}</span>
+            <span data-lang="es" class="hidden">{t.ritualsDesc.es}</span>
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {rituals.map((ritual) => (
+            <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div class={`w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center ${
+                ritual.color === 'terracotta' ? 'bg-terracotta-100' :
+                ritual.color === 'gold' ? 'bg-gold-100' : 'bg-sage-100'
+              }`}>
+                <svg
+                  class={`w-6 h-6 ${
+                    ritual.color === 'terracotta' ? 'text-terracotta-500' :
+                    ritual.color === 'gold' ? 'text-gold-500' : 'text-sage-500'
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-medium text-warm-800">
+                <span data-lang="en">{ritual.name.en}</span>
+                <span data-lang="es" class="hidden">{ritual.name.es}</span>
+              </h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-gradient-to-br from-gold-500 via-gold-600 to-gold-700 text-white">
+      <div class="container-narrow mx-auto text-center">
+        <h2 class="text-white text-3xl md:text-4xl font-serif">
+          <span data-lang="en">Ready to Plan Your Perfect Ceremony?</span>
+          <span data-lang="es" class="hidden">Lista para Planificar tu Ceremonia Perfecta?</span>
+        </h2>
+        <p class="mt-4 text-gold-100 text-lg max-w-2xl mx-auto">
+          <span data-lang="en">Let's create a ceremony that truly reflects your love story. I can't wait to hear from you!</span>
+          <span data-lang="es" class="hidden">Creemos una ceremonia que realmente refleje tu historia de amor. No puedo esperar a saber de ti!</span>
+        </p>
+        <div class="mt-8">
+          <Button href="/contact" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-gold-600">
+            <span data-lang="en">{common.getInTouch.en}</span>
+            <span data-lang="es" class="hidden">{common.getInTouch.es}</span>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<script>
+  function initLanguage() {
+    const lang = localStorage.getItem('lang') || 'en';
+    document.querySelectorAll('[data-lang]').forEach((el) => {
+      const elLang = el.getAttribute('data-lang');
+      if (elLang === lang) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+  initLanguage();
+  document.addEventListener('astro:page-load', initLanguage);
+</script>
