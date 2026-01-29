@@ -1,0 +1,22 @@
+{
+  "tier": "simple",
+  "title": "Simple & Sweet",
+  "titleEs": "Simple y Dulce",
+  "price": 400,
+  "featured": false,
+  "order": 1,
+  "features": [
+    "Pre-ceremony consultation (phone or video)",
+    "Standard ceremony script",
+    "Bilingual ceremony (English/Spanish)",
+    "Filing of marriage license",
+    "Up to 30-minute ceremony"
+  ],
+  "featuresEs": [
+    "Consulta previa a la ceremonia (telefono o video)",
+    "Guion de ceremonia estandar",
+    "Ceremonia bilingue (Ingles/Espanol)",
+    "Tramitacion de licencia de matrimonio",
+    "Ceremonia de hasta 30 minutos"
+  ]
+}

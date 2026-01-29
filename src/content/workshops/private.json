@@ -1,0 +1,25 @@
+{
+  "type": "private",
+  "title": "Private Events",
+  "titleEs": "Eventos Privados",
+  "description": "Perfect for bachelorette parties, birthdays, baby showers, and intimate celebrations with friends and family.",
+  "descriptionEs": "Perfecto para despedidas de soltera, cumpleanos, baby showers y celebraciones intimas con amigos y familia.",
+  "details": [
+    "2-hour creative session",
+    "All materials and supplies included",
+    "Groups of 5-15 guests",
+    "Your home or chosen venue",
+    "Wine & paint friendly",
+    "Photo-worthy memories"
+  ],
+  "detailsEs": [
+    "Sesion creativa de 2 horas",
+    "Todos los materiales incluidos",
+    "Grupos de 5-15 invitados",
+    "En tu casa o lugar elegido",
+    "Compatible con vino y pintura",
+    "Recuerdos para fotos"
+  ],
+  "icon": "heart",
+  "order": 2
+}

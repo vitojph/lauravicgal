@@ -1,0 +1,100 @@
+---
+import Button from '../common/Button.astro';
+import { translations, type Language } from '../../i18n/translations';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = translations.home;
+const common = translations.common;
+
+const services = [
+  {
+    title: t.ceremoniesTitle[lang],
+    description: t.ceremoniesDesc[lang],
+    href: '/ceremonies',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />`,
+    color: 'gold',
+  },
+  {
+    title: t.workshopsTitle[lang],
+    description: t.workshopsDesc[lang],
+    href: '/workshops',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />`,
+    color: 'terracotta',
+  },
+  {
+    title: t.commissionsTitle[lang],
+    description: t.commissionsDesc[lang],
+    href: '/commissions',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />`,
+    color: 'sage',
+  },
+];
+
+const colorClasses = {
+  gold: {
+    bg: 'bg-gold-50',
+    border: 'border-gold-200',
+    icon: 'text-gold-500',
+    hover: 'hover:border-gold-400',
+  },
+  terracotta: {
+    bg: 'bg-terracotta-50',
+    border: 'border-terracotta-200',
+    icon: 'text-terracotta-500',
+    hover: 'hover:border-terracotta-400',
+  },
+  sage: {
+    bg: 'bg-sage-50',
+    border: 'border-sage-200',
+    icon: 'text-sage-500',
+    hover: 'hover:border-sage-400',
+  },
+};
+---
+
+<section class="section-padding bg-white">
+  <div class="container-wide mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-warm-900">{t.servicesTitle[lang]}</h2>
+      <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {services.map((service) => {
+        const colors = colorClasses[service.color as keyof typeof colorClasses];
+        return (
+          <a
+            href={service.href}
+            class={`group block p-8 rounded-2xl border-2 ${colors.border} ${colors.bg} ${colors.hover} transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}
+          >
+            <div class={`w-14 h-14 rounded-xl ${colors.bg} flex items-center justify-center mb-6`}>
+              <svg
+                class={`w-8 h-8 ${colors.icon}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                set:html={service.icon}
+              />
+            </div>
+            <h3 class="text-xl font-serif font-semibold text-warm-900 mb-3">
+              {service.title}
+            </h3>
+            <p class="text-warm-600 mb-6">
+              {service.description}
+            </p>
+            <span class={`inline-flex items-center gap-2 font-medium ${colors.icon} group-hover:gap-3 transition-all`}>
+              {common.learnMore[lang]}
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

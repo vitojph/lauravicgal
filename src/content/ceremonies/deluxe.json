@@ -1,0 +1,28 @@
+{
+  "tier": "deluxe",
+  "title": "Deluxe",
+  "titleEs": "Deluxe",
+  "price": 1000,
+  "featured": false,
+  "order": 3,
+  "features": [
+    "Everything in Personalized",
+    "Multiple consultation meetings",
+    "Unlimited script revisions",
+    "Multiple symbolic rituals",
+    "Custom watercolor ceremony certificate",
+    "Keepsake copy of ceremony script",
+    "Coordination with other vendors",
+    "Up to 60-minute ceremony"
+  ],
+  "featuresEs": [
+    "Todo lo incluido en Personalizada",
+    "Multiples reuniones de consulta",
+    "Revisiones ilimitadas del guion",
+    "Multiples rituales simbolicos",
+    "Certificado de ceremonia en acuarela personalizado",
+    "Copia de recuerdo del guion de la ceremonia",
+    "Coordinacion con otros proveedores",
+    "Ceremonia de hasta 60 minutos"
+  ]
+}

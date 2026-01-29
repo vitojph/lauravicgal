@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import ImageGallery from '../components/gallery/ImageGallery.astro';
+import Button from '../components/common/Button.astro';
+import { translations } from '../i18n/translations';
+
+const t = translations.gallery;
+const common = translations.common;
+---
+
+<Layout
+  title="Gallery | Laura Vicente - Watercolor Art"
+  description="Browse Laura Vicente's watercolor art portfolio. Portraits, landscapes, pets, and abstract paintings."
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative py-16 md:py-24 watercolor-bg overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-10 -left-20 w-64 h-64 bg-terracotta-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -right-20 w-80 h-80 bg-gold-200/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container-narrow mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-warm-900">
+          <span data-lang="en">{t.pageTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageTitle.es}</span>
+        </h1>
+        <p class="mt-4 text-xl text-warm-600 max-w-2xl mx-auto">
+          <span data-lang="en">{t.pageSubtitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageSubtitle.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding bg-white">
+      <div class="container-wide mx-auto">
+        <div data-lang="en">
+          <ImageGallery lang="en" showFilters={true} />
+        </div>
+        <div data-lang="es" class="hidden">
+          <ImageGallery lang="es" showFilters={true} />
+        </div>
+      </div>
+    </section>
+
+    <!-- Commission CTA -->
+    <section class="section-padding bg-warm-50">
+      <div class="container-narrow mx-auto text-center">
+        <h2 class="text-warm-900">
+          <span data-lang="en">Love What You See?</span>
+          <span data-lang="es" class="hidden">Te Gusta lo que Ves?</span>
+        </h2>
+        <p class="mt-4 text-warm-600 max-w-2xl mx-auto">
+          <span data-lang="en">I'd love to create a custom piece just for you. Commission a painting of your loved ones, pets, or favorite places.</span>
+          <span data-lang="es" class="hidden">Me encantaria crear una pieza personalizada solo para ti. Encarga una pintura de tus seres queridos, mascotas o lugares favoritos.</span>
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/commissions" variant="primary">
+            <span data-lang="en">Commission Artwork</span>
+            <span data-lang="es" class="hidden">Encargar Arte</span>
+          </Button>
+          <Button href="/contact" variant="outline">
+            <span data-lang="en">{common.getInTouch.en}</span>
+            <span data-lang="es" class="hidden">{common.getInTouch.es}</span>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<script>
+  function initLanguage() {
+    const lang = localStorage.getItem('lang') || 'en';
+    document.querySelectorAll('[data-lang]').forEach((el) => {
+      const elLang = el.getAttribute('data-lang');
+      if (elLang === lang) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+  initLanguage();
+  document.addEventListener('astro:page-load', initLanguage);
+</script>

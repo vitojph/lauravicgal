@@ -1,0 +1,137 @@
+---
+import { translations, type Language } from '../../i18n/translations';
+
+interface Props {
+  lang?: Language;
+  showFilters?: boolean;
+}
+
+const { lang = 'en', showFilters = true } = Astro.props;
+const t = translations.gallery;
+
+// Placeholder images for the gallery
+const placeholderImages = [
+  { id: 1, category: 'portraits', aspect: 'portrait' },
+  { id: 2, category: 'landscapes', aspect: 'landscape' },
+  { id: 3, category: 'pets', aspect: 'square' },
+  { id: 4, category: 'abstract', aspect: 'portrait' },
+  { id: 5, category: 'portraits', aspect: 'landscape' },
+  { id: 6, category: 'landscapes', aspect: 'portrait' },
+  { id: 7, category: 'pets', aspect: 'landscape' },
+  { id: 8, category: 'abstract', aspect: 'square' },
+  { id: 9, category: 'portraits', aspect: 'square' },
+  { id: 10, category: 'landscapes', aspect: 'portrait' },
+  { id: 11, category: 'pets', aspect: 'portrait' },
+  { id: 12, category: 'abstract', aspect: 'landscape' },
+];
+
+const filters = [
+  { key: 'all', label: t.filterAll[lang] },
+  { key: 'portraits', label: t.filterPortraits[lang] },
+  { key: 'landscapes', label: t.filterLandscapes[lang] },
+  { key: 'pets', label: t.filterPets[lang] },
+  { key: 'abstract', label: t.filterAbstract[lang] },
+];
+
+const aspectClasses = {
+  portrait: 'aspect-[3/4]',
+  landscape: 'aspect-[4/3]',
+  square: 'aspect-square',
+};
+
+const categoryColors = {
+  portraits: 'from-terracotta-100 to-terracotta-200',
+  landscapes: 'from-sage-100 to-sage-200',
+  pets: 'from-gold-100 to-gold-200',
+  abstract: 'from-warm-100 to-warm-200',
+};
+---
+
+<div class="gallery-container">
+  {showFilters && (
+    <div class="flex flex-wrap justify-center gap-2 mb-12">
+      {filters.map((filter, index) => (
+        <button
+          data-filter={filter.key}
+          class={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+            index === 0
+              ? 'bg-terracotta-500 text-white'
+              : 'bg-warm-100 text-warm-700 hover:bg-warm-200'
+          }`}
+        >
+          {filter.label}
+        </button>
+      ))}
+    </div>
+  )}
+
+  <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+    {placeholderImages.map((image) => (
+      <div
+        data-category={image.category}
+        class="gallery-item break-inside-avoid group cursor-pointer"
+      >
+        <div
+          class={`relative ${aspectClasses[image.aspect as keyof typeof aspectClasses]} rounded-xl overflow-hidden bg-gradient-to-br ${categoryColors[image.category as keyof typeof categoryColors]} shadow-md hover:shadow-xl transition-all duration-300`}
+        >
+          <!-- Placeholder content -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center p-4">
+              <svg
+                class="w-12 h-12 mx-auto text-warm-400 group-hover:scale-110 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+              <p class="mt-2 text-warm-500 text-sm capitalize">{image.category}</p>
+            </div>
+          </div>
+
+          <!-- Hover overlay -->
+          <div class="absolute inset-0 bg-warm-900/0 group-hover:bg-warm-900/20 transition-colors duration-300"></div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  function initGalleryFilters() {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active button
+        filterButtons.forEach((b) => {
+          b.classList.remove('bg-terracotta-500', 'text-white');
+          b.classList.add('bg-warm-100', 'text-warm-700');
+        });
+        btn.classList.remove('bg-warm-100', 'text-warm-700');
+        btn.classList.add('bg-terracotta-500', 'text-white');
+
+        // Filter items
+        galleryItems.forEach((item) => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            (item as HTMLElement).style.display = 'block';
+          } else {
+            (item as HTMLElement).style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  initGalleryFilters();
+  document.addEventListener('astro:page-load', initGalleryFilters);
+</script>

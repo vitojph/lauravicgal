@@ -1,0 +1,211 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import Button from '../components/common/Button.astro';
+import FAQAccordion from '../components/common/FAQAccordion.astro';
+import { getCollection } from 'astro:content';
+import { translations } from '../i18n/translations';
+
+const t = translations.commissions;
+const common = translations.common;
+
+// Get FAQ items for commissions
+const allFaq = await getCollection('faq');
+const commissionsFaq = allFaq
+  .filter((item) => item.data.category === 'commissions')
+  .sort((a, b) => a.data.order - b.data.order);
+
+const faqItemsEn = commissionsFaq.map((item) => ({
+  question: item.data.question,
+  answer: item.data.answer,
+}));
+
+const faqItemsEs = commissionsFaq.map((item) => ({
+  question: item.data.questionEs,
+  answer: item.data.answerEs,
+}));
+
+// Pricing data
+const pricing = [
+  { size: '6" x 9"', sizeMetric: '15 x 23 cm', price: 250 },
+  { size: '8" x 10"', sizeMetric: '20 x 25 cm', price: 350 },
+  { size: '9" x 12"', sizeMetric: '23 x 30 cm', price: 450 },
+  { size: '11" x 14"', sizeMetric: '28 x 36 cm', price: 550 },
+];
+
+// Process steps
+const processSteps = [
+  { num: 1, title: t.step1, desc: t.step1Desc },
+  { num: 2, title: t.step2, desc: t.step2Desc },
+  { num: 3, title: t.step3, desc: t.step3Desc },
+  { num: 4, title: t.step4, desc: t.step4Desc },
+];
+---
+
+<Layout
+  title="Custom Artwork Commissions | Laura Vicente"
+  description="Commission original watercolor paintings. Portraits, pets, landscapes, and more. Transform your cherished memories into beautiful art."
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 watercolor-bg overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-10 -right-20 w-64 h-64 bg-sage-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -left-20 w-80 h-80 bg-terracotta-200/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container-narrow mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-warm-900">
+          <span data-lang="en">{t.pageTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageTitle.es}</span>
+        </h1>
+        <p class="mt-2 text-xl text-terracotta-500 font-medium">
+          <span data-lang="en">{t.pageSubtitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageSubtitle.es}</span>
+        </p>
+        <p class="mt-6 text-lg text-warm-600 max-w-2xl mx-auto">
+          <span data-lang="en">{t.intro.en}</span>
+          <span data-lang="es" class="hidden">{t.intro.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="section-padding bg-white">
+      <div class="container-narrow mx-auto">
+        <div class="text-center mb-12">
+          <h2>
+            <span data-lang="en">{t.pricingTitle.en}</span>
+            <span data-lang="es" class="hidden">{t.pricingTitle.es}</span>
+          </h2>
+          <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="bg-warm-50 rounded-2xl overflow-hidden border border-warm-200">
+          <div class="grid grid-cols-3 bg-warm-100 border-b border-warm-200 py-4 px-6 font-semibold text-warm-800">
+            <div>
+              <span data-lang="en">{common.size.en}</span>
+              <span data-lang="es" class="hidden">{common.size.es}</span>
+            </div>
+            <div class="text-center text-warm-600 text-sm hidden sm:block">Metric</div>
+            <div class="text-right">
+              <span data-lang="en">{common.price.en}</span>
+              <span data-lang="es" class="hidden">{common.price.es}</span>
+            </div>
+          </div>
+          {pricing.map((item, index) => (
+            <div class={`grid grid-cols-3 py-4 px-6 ${index !== pricing.length - 1 ? 'border-b border-warm-200' : ''}`}>
+              <div class="font-medium text-warm-900">{item.size}</div>
+              <div class="text-center text-warm-500 text-sm hidden sm:block">{item.sizeMetric}</div>
+              <div class="text-right">
+                <span class="font-bold text-terracotta-600">${item.price}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p class="mt-4 text-sm text-warm-500 text-center">
+          <span data-lang="en">* Custom sizes available upon request. Prices include domestic shipping.</span>
+          <span data-lang="es" class="hidden">* Tamanos personalizados disponibles bajo pedido. Los precios incluyen envio domestico.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding bg-warm-50">
+      <div class="container-wide mx-auto">
+        <div class="text-center mb-12">
+          <h2>
+            <span data-lang="en">{t.processTitle.en}</span>
+            <span data-lang="es" class="hidden">{t.processTitle.es}</span>
+          </h2>
+          <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          {processSteps.map((step, index) => (
+            <div class="text-center">
+              <div class="relative inline-flex">
+                <div class="w-16 h-16 rounded-full bg-terracotta-100 flex items-center justify-center mx-auto">
+                  <span class="text-2xl font-bold text-terracotta-500">{step.num}</span>
+                </div>
+                {index < processSteps.length - 1 && (
+                  <div class="hidden md:block absolute top-1/2 left-full w-full h-0.5 bg-terracotta-200 -translate-y-1/2" style="width: calc(100% + 2rem); left: 100%;"></div>
+                )}
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-warm-900">
+                <span data-lang="en">{step.title.en}</span>
+                <span data-lang="es" class="hidden">{step.title.es}</span>
+              </h3>
+              <p class="mt-2 text-warm-600 text-sm">
+                <span data-lang="en">{step.desc.en}</span>
+                <span data-lang="es" class="hidden">{step.desc.es}</span>
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-white">
+      <div class="container-narrow mx-auto">
+        <div class="text-center mb-12">
+          <h2>
+            <span data-lang="en">{t.faqTitle.en}</span>
+            <span data-lang="es" class="hidden">{t.faqTitle.es}</span>
+          </h2>
+          <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+        </div>
+
+        <div data-lang="en">
+          <FAQAccordion items={faqItemsEn} />
+        </div>
+        <div data-lang="es" class="hidden">
+          <FAQAccordion items={faqItemsEs} />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-gradient-to-br from-terracotta-500 via-terracotta-600 to-terracotta-700 text-white">
+      <div class="container-narrow mx-auto text-center">
+        <h2 class="text-white text-3xl md:text-4xl font-serif">
+          <span data-lang="en">Ready to Commission Your Artwork?</span>
+          <span data-lang="es" class="hidden">Listo para Encargar tu Obra de Arte?</span>
+        </h2>
+        <p class="mt-4 text-terracotta-100 text-lg max-w-2xl mx-auto">
+          <span data-lang="en">Send me your photos and ideas, and let's create something beautiful together!</span>
+          <span data-lang="es" class="hidden">Enviame tus fotos e ideas, y creemos algo hermoso juntos!</span>
+        </p>
+        <div class="mt-8">
+          <Button href="/contact" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-terracotta-600">
+            <span data-lang="en">{common.getInTouch.en}</span>
+            <span data-lang="es" class="hidden">{common.getInTouch.es}</span>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<script>
+  function initLanguage() {
+    const lang = localStorage.getItem('lang') || 'en';
+    document.querySelectorAll('[data-lang]').forEach((el) => {
+      const elLang = el.getAttribute('data-lang');
+      if (elLang === lang) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+  initLanguage();
+  document.addEventListener('astro:page-load', initLanguage);
+</script>

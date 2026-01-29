@@ -1,0 +1,100 @@
+---
+import SocialLinks from './SocialLinks.astro';
+import { translations, type Language } from '../../i18n/translations';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'en' } = Astro.props;
+
+const t = translations;
+const currentYear = new Date().getFullYear();
+
+const quickLinks = [
+  { href: '/ceremonies', label: t.nav.ceremonies[lang] },
+  { href: '/workshops', label: t.nav.workshops[lang] },
+  { href: '/commissions', label: t.nav.commissions[lang] },
+  { href: '/gallery', label: t.nav.gallery[lang] },
+];
+---
+
+<footer class="bg-warm-900 text-warm-200">
+  <div class="container-wide mx-auto section-padding">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <a href="/" class="inline-block">
+          <span class="font-script text-3xl text-terracotta-400">Laura Vicente</span>
+        </a>
+        <p class="mt-4 text-warm-400 max-w-md">
+          {t.footer.tagline[lang]}
+        </p>
+        <div class="mt-6">
+          <SocialLinks class="[&_a]:text-warm-400 [&_a:hover]:text-terracotta-400" />
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">{t.footer.quickLinks[lang]}</h3>
+        <ul class="space-y-3">
+          {quickLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-warm-400 hover:text-terracotta-400 transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">{t.footer.connect[lang]}</h3>
+        <ul class="space-y-3 text-warm-400">
+          <li>
+            <a
+              href="mailto:lauravicentegallardo@gmail.com"
+              class="hover:text-terracotta-400 transition-colors"
+            >
+              lauravicentegallardo@gmail.com
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+12016772927"
+              class="hover:text-terracotta-400 transition-colors"
+            >
+              +1 (201) 677-2927
+            </a>
+          </li>
+          <li class="text-warm-500">
+            {t.contact.location[lang]}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-8 border-t border-warm-800">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-warm-500 text-sm">
+          &copy; {currentYear} Laura Vicente. {t.common.allRightsReserved[lang]}.
+        </p>
+        <div class="flex items-center gap-4 text-warm-500 text-sm">
+          <a href="/about" class="hover:text-terracotta-400 transition-colors">
+            {t.nav.about[lang]}
+          </a>
+          <span class="text-warm-700">|</span>
+          <a href="/contact" class="hover:text-terracotta-400 transition-colors">
+            {t.nav.contact[lang]}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

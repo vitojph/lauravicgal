@@ -1,0 +1,232 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import Button from '../components/common/Button.astro';
+import { translations } from '../i18n/translations';
+
+const t = translations.about;
+const common = translations.common;
+
+const credentialsEn = [
+  'Certified Wedding Officiant (NJ)',
+  'Bilingual (English/Spanish)',
+  'Fine Arts Background',
+  'Cultural Creative & Event Host',
+];
+
+const credentialsEs = [
+  'Oficiante de Bodas Certificada (NJ)',
+  'Bilingue (Ingles/Espanol)',
+  'Formacion en Bellas Artes',
+  'Creativa Cultural y Anfitriona de Eventos',
+];
+---
+
+<Layout
+  title="About Laura Vicente | Watercolor Artist & Wedding Officiant"
+  description="Meet Laura Vicente - a watercolor artist and certified wedding officiant based in the NYC area. Learn about her journey from Malaga, Spain to New Jersey."
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 watercolor-bg overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-10 -right-20 w-64 h-64 bg-terracotta-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -left-20 w-80 h-80 bg-sage-200/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container-wide mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Image placeholder -->
+          <div class="order-2 lg:order-1">
+            <div class="aspect-[4/5] max-w-md mx-auto rounded-2xl bg-gradient-to-br from-terracotta-100 via-gold-50 to-sage-100 shadow-xl overflow-hidden">
+              <div class="h-full flex items-center justify-center">
+                <div class="text-center p-8">
+                  <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-terracotta-200/50 flex items-center justify-center">
+                    <svg class="w-12 h-12 text-terracotta-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <p class="text-warm-500 text-sm">Portrait placeholder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text content -->
+          <div class="order-1 lg:order-2 text-center lg:text-left">
+            <h1 class="text-warm-900">
+              <span data-lang="en">{t.pageTitle.en}</span>
+              <span data-lang="es" class="hidden">{t.pageTitle.es}</span>
+            </h1>
+            <p class="mt-6 text-xl text-warm-700 leading-relaxed">
+              <span data-lang="en">{t.intro.en}</span>
+              <span data-lang="es" class="hidden">{t.intro.es}</span>
+            </p>
+            <p class="mt-4 text-warm-600 leading-relaxed">
+              <span data-lang="en">{t.bio.en}</span>
+              <span data-lang="es" class="hidden">{t.bio.es}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="section-padding bg-white">
+      <div class="container-narrow mx-auto">
+        <div class="text-center mb-12">
+          <h2>
+            <span data-lang="en">{t.credentials.en}</span>
+            <span data-lang="es" class="hidden">{t.credentials.es}</span>
+          </h2>
+          <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4" data-lang="en">
+          {credentialsEn.map((credential, index) => {
+            const colors = ['terracotta', 'gold', 'sage', 'terracotta'];
+            const color = colors[index % colors.length];
+            const bgClass = color === 'terracotta' ? 'bg-terracotta-50' : color === 'gold' ? 'bg-gold-50' : 'bg-sage-50';
+            const iconColor = color === 'terracotta' ? 'text-terracotta-500' : color === 'gold' ? 'text-gold-500' : 'text-sage-500';
+
+            return (
+              <div class={`flex items-center gap-4 p-4 rounded-xl ${bgClass}`}>
+                <div class={`flex-shrink-0 ${iconColor}`}>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span class="font-medium text-warm-800">{credential}</span>
+              </div>
+            );
+          })}
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 hidden" data-lang="es">
+          {credentialsEs.map((credential, index) => {
+            const colors = ['terracotta', 'gold', 'sage', 'terracotta'];
+            const color = colors[index % colors.length];
+            const bgClass = color === 'terracotta' ? 'bg-terracotta-50' : color === 'gold' ? 'bg-gold-50' : 'bg-sage-50';
+            const iconColor = color === 'terracotta' ? 'text-terracotta-500' : color === 'gold' ? 'text-gold-500' : 'text-sage-500';
+
+            return (
+              <div class={`flex items-center gap-4 p-4 rounded-xl ${bgClass}`}>
+                <div class={`flex-shrink-0 ${iconColor}`}>
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <span class="font-medium text-warm-800">{credential}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section-padding bg-warm-50">
+      <div class="container-narrow mx-auto text-center">
+        <h2>
+          <span data-lang="en">{t.approach.en}</span>
+          <span data-lang="es" class="hidden">{t.approach.es}</span>
+        </h2>
+        <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+        <p class="mt-8 text-lg text-warm-700 leading-relaxed max-w-2xl mx-auto">
+          <span data-lang="en">{t.approachText.en}</span>
+          <span data-lang="es" class="hidden">{t.approachText.es}</span>
+        </p>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-terracotta-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-terracotta-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-warm-900">
+              <span data-lang="en">Heart-Centered</span>
+              <span data-lang="es" class="hidden">Centrada en el Corazon</span>
+            </h3>
+            <p class="mt-2 text-warm-600 text-sm">
+              <span data-lang="en">Every project begins with understanding what matters most to you</span>
+              <span data-lang="es" class="hidden">Cada proyecto comienza por entender lo que mas te importa</span>
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-gold-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-warm-900">
+              <span data-lang="en">Culturally Rich</span>
+              <span data-lang="es" class="hidden">Culturalmente Rica</span>
+            </h3>
+            <p class="mt-2 text-warm-600 text-sm">
+              <span data-lang="en">Blending Spanish heritage with American experiences</span>
+              <span data-lang="es" class="hidden">Combinando herencia espanola con experiencias americanas</span>
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-sage-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold text-warm-900">
+              <span data-lang="en">Artistically Authentic</span>
+              <span data-lang="es" class="hidden">Autenticamente Artistica</span>
+            </h3>
+            <p class="mt-2 text-warm-600 text-sm">
+              <span data-lang="en">Creating with intention, beauty, and meaning</span>
+              <span data-lang="es" class="hidden">Creando con intencion, belleza y significado</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-gradient-to-br from-sage-500 via-sage-600 to-sage-700 text-white">
+      <div class="container-narrow mx-auto text-center">
+        <h2 class="text-white text-3xl md:text-4xl font-serif">
+          <span data-lang="en">Let's Connect</span>
+          <span data-lang="es" class="hidden">Conectemos</span>
+        </h2>
+        <p class="mt-4 text-sage-100 text-lg max-w-2xl mx-auto">
+          <span data-lang="en">I'd love to hear about your project, event, or creative vision. Let's make something beautiful together.</span>
+          <span data-lang="es" class="hidden">Me encantaria escuchar sobre tu proyecto, evento o vision creativa. Hagamos algo hermoso juntos.</span>
+        </p>
+        <div class="mt-8">
+          <Button href="/contact" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-sage-600">
+            <span data-lang="en">{common.getInTouch.en}</span>
+            <span data-lang="es" class="hidden">{common.getInTouch.es}</span>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<script>
+  function initLanguage() {
+    const lang = localStorage.getItem('lang') || 'en';
+    document.querySelectorAll('[data-lang]').forEach((el) => {
+      const elLang = el.getAttribute('data-lang');
+      if (elLang === lang) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+  initLanguage();
+  document.addEventListener('astro:page-load', initLanguage);
+</script>
