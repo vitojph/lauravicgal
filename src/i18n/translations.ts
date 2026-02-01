@@ -33,8 +33,8 @@ export const translations = {
       es: 'Arte que Celebra el Amor y la Vida'
     },
     heroSubtitle: {
-      en: 'Watercolor artist, wedding officiant, and cultural creative based in the NYC area',
-      es: 'Artista de acuarela, oficiante de bodas y creativa cultural en el area de NYC'
+      en: 'Watercolor artist, wedding officiant, and cultural creative based in the NY/NJ area',
+      es: 'Artista de acuarela, oficiante de bodas y creativa cultural en el area de NY/NJ'
     },
     servicesTitle: {
       en: 'What I Offer',
@@ -187,12 +187,12 @@ export const translations = {
   about: {
     pageTitle: { en: 'About Laura', es: 'Sobre Laura' },
     intro: {
-      en: 'I\'m Laura Vicente Gallardo, a watercolor artist and certified wedding officiant based in the NYC area.',
-      es: 'Soy Laura Vicente Gallardo, artista de acuarela y oficiante de bodas certificada en el area de NYC.'
+      en: 'I\'m Laura Vicente Gallardo, a watercolor artist and certified wedding officiant based in the NY/NJ area.',
+      es: 'Soy Laura Vicente Gallardo, artista de acuarela y oficiante de bodas certificada en el area de NY/NJ.'
     },
     bio: {
-      en: 'My journey began in Malaga, Spain, where I developed a deep appreciation for art and culture. Now based in New Jersey, I combine my Spanish roots with my American home to create meaningful connections through art and ceremony.',
-      es: 'Mi viaje comenzo en Malaga, Espana, donde desarrolle un profundo aprecio por el arte y la cultura. Ahora en Nueva Jersey, combino mis raices espanolas con mi hogar americano para crear conexiones significativas a traves del arte y la ceremonia.'
+      en: 'My journey began in Madrid, Spain, where I developed a deep appreciation for art and culture. Now based in New Jersey, I combine my Spanish roots with my American home to create meaningful connections through art and ceremony.',
+      es: 'Mi viaje comenzo en Madrid, España, donde desarrolle un profundo aprecio por el arte y la cultura. Ahora en Nueva Jersey, combino mis raices espanolas con mi hogar americano para crear conexiones significativas a traves del arte y la ceremonia.'
     },
     credentials: { en: 'Credentials', es: 'Credenciales' },
     approach: { en: 'My Approach', es: 'Mi Enfoque' },
@@ -213,7 +213,7 @@ export const translations = {
     phoneLabel: { en: 'Phone', es: 'Telefono' },
     followMe: { en: 'Follow Me', es: 'Sigueme' },
     locationLabel: { en: 'Location', es: 'Ubicacion' },
-    location: { en: 'NYC Metro Area, NJ', es: 'Area Metropolitana de NYC, NJ' },
+    location: { en: 'NY/NJ area', es: 'Área metropolitana de NY/NJ' },
   },
 
   // Footer
