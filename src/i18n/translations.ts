@@ -7,22 +7,22 @@ export const translations = {
     ceremonies: { en: 'Ceremonies', es: 'Ceremonias' },
     workshops: { en: 'Workshops', es: 'Talleres' },
     commissions: { en: 'Commissions', es: 'Encargos' },
-    gallery: { en: 'Gallery', es: 'Galeria' },
-    about: { en: 'About', es: 'Sobre Mi' },
+    gallery: { en: 'Gallery', es: 'Galería' },
+    about: { en: 'About', es: 'Sobre Mí' },
     contact: { en: 'Contact', es: 'Contacto' },
   },
 
   // Common
   common: {
-    learnMore: { en: 'Learn More', es: 'Saber Mas' },
+    learnMore: { en: 'Learn More', es: 'Saber Más' },
     bookNow: { en: 'Book Now', es: 'Reservar' },
     getInTouch: { en: 'Get in Touch', es: 'Contactar' },
-    viewGallery: { en: 'View Gallery', es: 'Ver Galeria' },
+    viewGallery: { en: 'View Gallery', es: 'Ver Galería' },
     startingAt: { en: 'Starting at', es: 'Desde' },
     includes: { en: 'Includes', es: 'Incluye' },
-    features: { en: 'Features', es: 'Caracteristicas' },
+    features: { en: 'Features', es: 'Características' },
     price: { en: 'Price', es: 'Precio' },
-    size: { en: 'Size', es: 'Tamano' },
+    size: { en: 'Size', es: 'Tamaño' },
     allRightsReserved: { en: 'All rights reserved', es: 'Todos los derechos reservados' },
   },
 
@@ -33,8 +33,8 @@ export const translations = {
       es: 'Arte que Celebra el Amor y la Vida'
     },
     heroSubtitle: {
-      en: 'Watercolor artist, wedding officiant, and cultural creative based in the NYC area',
-      es: 'Artista de acuarela, oficiante de bodas y creativa cultural en el area de NYC'
+      en: 'Watercolor artist, wedding officiant, and cultural creative based in the NY/NJ area',
+      es: 'Artista de acuarela, oficiante de bodas y creativa cultural en el área de NY/NJ'
     },
     servicesTitle: {
       en: 'What I Offer',
@@ -46,7 +46,7 @@ export const translations = {
     },
     ceremoniesDesc: {
       en: 'Personalized bilingual ceremonies that honor your unique love story',
-      es: 'Ceremonias bilingues personalizadas que honran su historia de amor unica'
+      es: 'Ceremonias bilingües personalizadas que honran su historia de amor única'
     },
     workshopsTitle: {
       en: 'Art Workshops',
@@ -82,7 +82,7 @@ export const translations = {
     },
     intro: {
       en: 'I create personalized, bilingual wedding ceremonies that reflect your unique love story. As a certified officiant, I bring warmth, cultural sensitivity, and artistic flair to your special day.',
-      es: 'Creo ceremonias de boda bilingues y personalizadas que reflejan su historia de amor unica. Como oficiante certificada, aporto calidez, sensibilidad cultural y un toque artistico a su dia especial.'
+      es: 'Creo ceremonias de boda bilingües y personalizadas que reflejan su historia de amor única. Como oficiante certificada, aporto calidez, sensibilidad cultural y un toque artístico a su día especial.'
     },
     pricingTitle: {
       en: 'Ceremony Packages',
@@ -90,17 +90,17 @@ export const translations = {
     },
     ritualsTitle: {
       en: 'Symbolic Rituals',
-      es: 'Rituales Simbolicos'
+      es: 'Rituales Simbólicos'
     },
     ritualsDesc: {
       en: 'Add meaningful traditions to your ceremony',
-      es: 'Anade tradiciones significativas a tu ceremonia'
+      es: 'Añade tradiciones significativas a tu ceremonia'
     },
     // Ritual names
     sandCeremony: { en: 'Sand Ceremony', es: 'Ceremonia de Arena' },
     handfasting: { en: 'Handfasting', es: 'Handfasting' },
-    treePlanting: { en: 'Tree Planting', es: 'Plantacion de Arbol' },
-    timeCapsule: { en: 'Time Capsule', es: 'Capsula del Tiempo' },
+    treePlanting: { en: 'Tree Planting', es: 'Plantación de Árbol' },
+    timeCapsule: { en: 'Time Capsule', es: 'Cápsula del Tiempo' },
     redThread: { en: 'Red Thread', es: 'Hilo Rojo' },
     enamorarte: { en: 'EnamorARTE', es: 'EnamorARTE' },
     // Tier names
@@ -121,22 +121,22 @@ export const translations = {
     },
     intro: {
       en: 'Experience the joy of creating with watercolors. Perfect for team building, private parties, or learning something new.',
-      es: 'Experimenta la alegria de crear con acuarelas. Perfecto para team building, fiestas privadas o aprender algo nuevo.'
+      es: 'Experimenta la alegría de crear con acuarelas. Perfecto para team building, fiestas privadas o aprender algo nuevo.'
     },
     teamBuilding: { en: 'Team Building', es: 'Team Building' },
     teamBuildingDesc: {
       en: 'Bring your team together for a creative, stress-relieving experience',
-      es: 'Reune a tu equipo para una experiencia creativa y relajante'
+      es: 'Reúne a tu equipo para una experiencia creativa y relajante'
     },
     privateEvents: { en: 'Private Events', es: 'Eventos Privados' },
     privateEventsDesc: {
       en: 'Perfect for bachelorette parties, birthdays, and celebrations',
-      es: 'Perfecto para despedidas de soltera, cumpleanos y celebraciones'
+      es: 'Perfecto para despedidas de soltera, cumpleaños y celebraciones'
     },
     groupClasses: { en: 'Group Classes', es: 'Clases Grupales' },
     groupClassesDesc: {
       en: 'Join other art enthusiasts in a fun, supportive environment',
-      es: 'Unete a otros entusiastas del arte en un ambiente divertido y de apoyo'
+      es: 'Únete a otros entusiastas del arte en un ambiente divertido y de apoyo'
     },
     bookWorkshop: { en: 'Book a Workshop', es: 'Reservar un Taller' },
   },
@@ -153,28 +153,28 @@ export const translations = {
     },
     intro: {
       en: 'Transform your cherished memories, beloved pets, or dream landscapes into beautiful watercolor art.',
-      es: 'Transforma tus recuerdos preciados, mascotas queridas o paisajes sonados en hermoso arte de acuarela.'
+      es: 'Transforma tus recuerdos preciados, mascotas queridas o paisajes soñados en hermoso arte de acuarela.'
     },
-    pricingTitle: { en: 'Pricing by Size', es: 'Precios por Tamano' },
+    pricingTitle: { en: 'Pricing by Size', es: 'Precios por Tamaño' },
     processTitle: { en: 'The Process', es: 'El Proceso' },
     faqTitle: { en: 'Frequently Asked Questions', es: 'Preguntas Frecuentes' },
     // Process steps
-    step1: { en: 'Share your vision', es: 'Comparte tu vision' },
-    step1Desc: { en: 'Send me your photos and ideas', es: 'Enviame tus fotos e ideas' },
+    step1: { en: 'Share your vision', es: 'Comparte tu visión' },
+    step1Desc: { en: 'Send me your photos and ideas', es: 'Envíame tus fotos e ideas' },
     step2: { en: 'Review the sketch', es: 'Revisa el boceto' },
-    step2Desc: { en: 'I\'ll create a preliminary sketch for your approval', es: 'Creare un boceto preliminar para tu aprobacion' },
+    step2Desc: { en: 'I\'ll create a preliminary sketch for your approval', es: 'Crearé un boceto preliminar para tu aprobación' },
     step3: { en: 'Painting begins', es: 'Comienza la pintura' },
-    step3Desc: { en: 'I bring your vision to life with watercolors', es: 'Doy vida a tu vision con acuarelas' },
+    step3Desc: { en: 'I bring your vision to life with watercolors', es: 'Doy vida a tu visión con acuarelas' },
     step4: { en: 'Delivery', es: 'Entrega' },
     step4Desc: { en: 'Receive your finished artwork, ready to frame', es: 'Recibe tu obra terminada, lista para enmarcar' },
   },
 
   // Gallery Page
   gallery: {
-    pageTitle: { en: 'Gallery', es: 'Galeria' },
+    pageTitle: { en: 'Gallery', es: 'Galería' },
     pageSubtitle: {
       en: 'A collection of my watercolor work',
-      es: 'Una coleccion de mi trabajo en acuarela'
+      es: 'Una colección de mi trabajo en acuarela'
     },
     filterAll: { en: 'All', es: 'Todo' },
     filterPortraits: { en: 'Portraits', es: 'Retratos' },
@@ -187,18 +187,18 @@ export const translations = {
   about: {
     pageTitle: { en: 'About Laura', es: 'Sobre Laura' },
     intro: {
-      en: 'I\'m Laura Vicente Gallardo, a watercolor artist and certified wedding officiant based in the NYC area.',
-      es: 'Soy Laura Vicente Gallardo, artista de acuarela y oficiante de bodas certificada en el area de NYC.'
+      en: 'I\'m Laura Vicente Gallardo, a watercolor artist and certified wedding officiant based in the NY/NJ area.',
+      es: 'Soy Laura Vicente Gallardo, artista de acuarela y oficiante de bodas certificada en el área de NY/NJ.'
     },
     bio: {
-      en: 'My journey began in Malaga, Spain, where I developed a deep appreciation for art and culture. Now based in New Jersey, I combine my Spanish roots with my American home to create meaningful connections through art and ceremony.',
-      es: 'Mi viaje comenzo en Malaga, Espana, donde desarrolle un profundo aprecio por el arte y la cultura. Ahora en Nueva Jersey, combino mis raices espanolas con mi hogar americano para crear conexiones significativas a traves del arte y la ceremonia.'
+      en: 'My journey began in Madrid, Spain, where I developed a deep appreciation for art and culture. Now based in New Jersey, I combine my Spanish roots with my American home to create meaningful connections through art and ceremony.',
+      es: 'Mi viaje comenzó en Madrid, España, donde desarrollé un profundo aprecio por el arte y la cultura. Ahora en Nueva Jersey, combino mis raíces españolas con mi hogar americano para crear conexiones significativas a través del arte y la ceremonia.'
     },
     credentials: { en: 'Credentials', es: 'Credenciales' },
     approach: { en: 'My Approach', es: 'Mi Enfoque' },
     approachText: {
       en: 'Whether I\'m painting a portrait or officiating a wedding, my goal is always the same: to capture the essence of what makes each moment, person, or relationship special.',
-      es: 'Ya sea pintando un retrato u oficiando una boda, mi objetivo es siempre el mismo: capturar la esencia de lo que hace especial cada momento, persona o relacion.'
+      es: 'Ya sea pintando un retrato u oficiando una boda, mi objetivo es siempre el mismo: capturar la esencia de lo que hace especial cada momento, persona o relación.'
     },
   },
 
@@ -207,22 +207,22 @@ export const translations = {
     pageTitle: { en: 'Get in Touch', es: 'Contacto' },
     pageSubtitle: {
       en: 'I\'d love to hear from you',
-      es: 'Me encantaria saber de ti'
+      es: 'Me encantaría saber de ti'
     },
     emailLabel: { en: 'Email', es: 'Correo' },
-    phoneLabel: { en: 'Phone', es: 'Telefono' },
-    followMe: { en: 'Follow Me', es: 'Sigueme' },
-    locationLabel: { en: 'Location', es: 'Ubicacion' },
-    location: { en: 'NYC Metro Area, NJ', es: 'Area Metropolitana de NYC, NJ' },
+    phoneLabel: { en: 'Phone', es: 'Teléfono' },
+    followMe: { en: 'Follow Me', es: 'Sígueme' },
+    locationLabel: { en: 'Location', es: 'Ubicación' },
+    location: { en: 'NY/NJ area', es: 'Área metropolitana de NY/NJ' },
   },
 
   // Footer
   footer: {
     tagline: {
       en: 'Creating beauty through art and ceremony',
-      es: 'Creando belleza a traves del arte y la ceremonia'
+      es: 'Creando belleza a través del arte y la ceremonia'
     },
-    quickLinks: { en: 'Quick Links', es: 'Enlaces Rapidos' },
+    quickLinks: { en: 'Quick Links', es: 'Enlaces Rápidos' },
     connect: { en: 'Connect', es: 'Conectar' },
   },
 } as const;
