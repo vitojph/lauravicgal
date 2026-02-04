@@ -4,7 +4,7 @@ export const translations = {
   // Navigation
   nav: {
     home: { en: 'Home', es: 'Inicio' },
-    ceremonies: { en: 'Ceremonies', es: 'Ceremonias' },
+    ceremonies: { en: 'Events', es: 'Eventos' },
     workshops: { en: 'Workshops', es: 'Talleres' },
     commissions: { en: 'Commissions', es: 'Encargos' },
     gallery: { en: 'Gallery', es: 'Galería' },
@@ -33,8 +33,8 @@ export const translations = {
       es: 'Arte que Celebra el Amor y la Vida'
     },
     heroSubtitle: {
-      en: 'Watercolor artist, wedding officiant, and cultural creative based in the NY/NJ area',
-      es: 'Artista de acuarela, oficiante de bodas y creativa cultural en el área de NY/NJ'
+      en: 'Transformational event leader and watercolor artist, creating meaningful ceremonies and immersive creative experiences. Based in NY/NJ',
+      es: 'Líder de eventos transformacionales y artista de acuarela, creando ceremonias significativas y experiencias creativas inmersivas. Basada en NY/NJ'
     },
     servicesTitle: {
       en: 'What I Offer',
