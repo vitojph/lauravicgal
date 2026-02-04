@@ -4,7 +4,7 @@ export const translations = {
   // Navigation
   nav: {
     home: { en: 'Home', es: 'Inicio' },
-    ceremonies: { en: 'Ceremonies', es: 'Ceremonias' },
+    ceremonies: { en: 'Events', es: 'Eventos' },
     workshops: { en: 'Workshops', es: 'Talleres' },
     commissions: { en: 'Commissions', es: 'Encargos' },
     gallery: { en: 'Gallery', es: 'Galería' },
