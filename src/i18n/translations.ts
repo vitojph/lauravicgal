@@ -209,7 +209,7 @@ export const translations = {
       en: 'I\'d love to hear from you',
       es: 'Me encantaría saber de ti'
     },
-    emailLabel: { en: 'Email', es: 'Correo' },
+    emailLabel: { en: 'Instagram', es: 'Instagram' },
     phoneLabel: { en: 'Phone', es: 'Teléfono' },
     followMe: { en: 'Follow Me', es: 'Sígueme' },
     locationLabel: { en: 'Location', es: 'Ubicación' },
