@@ -11,26 +11,26 @@ const t = translations.gallery;
 
 // Placeholder images for the gallery
 const placeholderImages = [
-  { id: 1, category: 'portraits', aspect: 'portrait' },
-  { id: 2, category: 'landscapes', aspect: 'landscape' },
-  { id: 3, category: 'pets', aspect: 'square' },
-  { id: 4, category: 'abstract', aspect: 'portrait' },
-  { id: 5, category: 'portraits', aspect: 'landscape' },
-  { id: 6, category: 'landscapes', aspect: 'portrait' },
-  { id: 7, category: 'pets', aspect: 'landscape' },
-  { id: 8, category: 'abstract', aspect: 'square' },
-  { id: 9, category: 'portraits', aspect: 'square' },
-  { id: 10, category: 'landscapes', aspect: 'portrait' },
-  { id: 11, category: 'pets', aspect: 'portrait' },
-  { id: 12, category: 'abstract', aspect: 'landscape' },
+  { id: 1, category: 'weddings', aspect: 'portrait' },
+  { id: 2, category: 'workshops', aspect: 'landscape' },
+  { id: 3, category: 'custom-artwork', aspect: 'square' },
+  { id: 4, category: 'wedding-art', aspect: 'portrait' },
+  { id: 5, category: 'weddings', aspect: 'landscape' },
+  { id: 6, category: 'workshops', aspect: 'portrait' },
+  { id: 7, category: 'custom-artwork', aspect: 'landscape' },
+  { id: 8, category: 'wedding-art', aspect: 'square' },
+  { id: 9, category: 'weddings', aspect: 'square' },
+  { id: 10, category: 'workshops', aspect: 'portrait' },
+  { id: 11, category: 'custom-artwork', aspect: 'portrait' },
+  { id: 12, category: 'wedding-art', aspect: 'landscape' },
 ];
 
 const filters = [
   { key: 'all', label: t.filterAll[lang] },
-  { key: 'portraits', label: t.filterPortraits[lang] },
-  { key: 'landscapes', label: t.filterLandscapes[lang] },
-  { key: 'pets', label: t.filterPets[lang] },
-  { key: 'abstract', label: t.filterAbstract[lang] },
+  { key: 'weddings', label: t.filterWeddings[lang] },
+  { key: 'workshops', label: t.filterWorkshops[lang] },
+  { key: 'custom-artwork', label: t.filterCustomArtwork[lang] },
+  { key: 'wedding-art', label: t.filterWeddingArt[lang] },
 ];
 
 const aspectClasses = {
@@ -40,10 +40,10 @@ const aspectClasses = {
 };
 
 const categoryColors = {
-  portraits: 'from-terracotta-100 to-terracotta-200',
-  landscapes: 'from-sage-100 to-sage-200',
-  pets: 'from-gold-100 to-gold-200',
-  abstract: 'from-warm-100 to-warm-200',
+  'weddings': 'from-terracotta-100 to-terracotta-200',
+  'workshops': 'from-sage-100 to-sage-200',
+  'custom-artwork': 'from-gold-100 to-gold-200',
+  'wedding-art': 'from-warm-100 to-warm-200',
 };
 ---
 

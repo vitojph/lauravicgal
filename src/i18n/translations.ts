@@ -173,14 +173,14 @@ export const translations = {
   gallery: {
     pageTitle: { en: 'Gallery', es: 'Galería' },
     pageSubtitle: {
-      en: 'A collection of my watercolor work',
-      es: 'Una colección de mi trabajo en acuarela'
+      en: 'Weddings, workshops, and custom artwork',
+      es: 'Bodas, talleres y arte personalizado'
     },
     filterAll: { en: 'All', es: 'Todo' },
-    filterPortraits: { en: 'Portraits', es: 'Retratos' },
-    filterLandscapes: { en: 'Landscapes', es: 'Paisajes' },
-    filterPets: { en: 'Pets', es: 'Mascotas' },
-    filterAbstract: { en: 'Abstract', es: 'Abstracto' },
+    filterWeddings: { en: 'Weddings', es: 'Bodas' },
+    filterWorkshops: { en: 'Workshops', es: 'Talleres' },
+    filterCustomArtwork: { en: 'Custom Artwork', es: 'Arte Personalizado' },
+    filterWeddingArt: { en: 'Wedding + Art', es: 'Boda + Arte' },
   },
 
   // About Page
