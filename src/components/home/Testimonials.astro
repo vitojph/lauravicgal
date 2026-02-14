@@ -1,0 +1,47 @@
+---
+import { translations } from '../../i18n/translations';
+
+const t = translations.testimonials;
+
+const testimonials = [
+  { quote: t.quote1, author: t.author1, context: t.context1 },
+  { quote: t.quote2, author: t.author2, context: t.context2 },
+  { quote: t.quote3, author: t.author3, context: t.context3 },
+];
+---
+
+<section class="section-padding bg-warm-50">
+  <div class="container-wide mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-warm-900">
+        <span data-lang="en">{t.sectionTitle.en}</span>
+        <span data-lang="es" class="hidden">{t.sectionTitle.es}</span>
+      </h2>
+      <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {testimonials.map((item) => (
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <svg class="w-8 h-8 text-terracotta-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
+          </svg>
+          <p class="text-warm-700 italic mb-6">
+            <span data-lang="en">{item.quote.en}</span>
+            <span data-lang="es" class="hidden">{item.quote.es}</span>
+          </p>
+          <div>
+            <p class="font-semibold text-warm-900">
+              <span data-lang="en">{item.author.en}</span>
+              <span data-lang="es" class="hidden">{item.author.es}</span>
+            </p>
+            <p class="text-sm text-warm-500">
+              <span data-lang="en">{item.context.en}</span>
+              <span data-lang="es" class="hidden">{item.context.es}</span>
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

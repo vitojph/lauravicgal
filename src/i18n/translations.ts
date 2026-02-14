@@ -216,6 +216,32 @@ export const translations = {
     location: { en: 'NY/NJ area', es: 'Área metropolitana de NY/NJ' },
   },
 
+  // Testimonials
+  testimonials: {
+    sectionTitle: {
+      en: 'What Participants Say',
+      es: 'Lo Que Dicen los Participantes'
+    },
+    quote1: {
+      en: 'The watercolor workshop was such a magical experience. Laura creates a warm, welcoming space where everyone feels like an artist.',
+      es: 'El taller de acuarela fue una experiencia mágica. Laura crea un espacio cálido y acogedor donde todos se sienten artistas.'
+    },
+    author1: { en: 'Sarah M.', es: 'Sarah M.' },
+    context1: { en: 'Workshop Participant', es: 'Participante de Taller' },
+    quote2: {
+      en: 'Laura officiated our bilingual ceremony and it was absolutely perfect. She captured the essence of our love story beautifully.',
+      es: 'Laura ofició nuestra ceremonia bilingüe y fue absolutamente perfecta. Capturó la esencia de nuestra historia de amor de manera hermosa.'
+    },
+    author2: { en: 'María & James', es: 'María & James' },
+    context2: { en: 'Wedding Clients', es: 'Clientes de Boda' },
+    quote3: {
+      en: 'The custom portrait Laura painted of our family is our most treasured possession. Her attention to detail is extraordinary.',
+      es: 'El retrato personalizado que Laura pintó de nuestra familia es nuestro bien más preciado. Su atención al detalle es extraordinaria.'
+    },
+    author3: { en: 'The Rivera Family', es: 'La Familia Rivera' },
+    context3: { en: 'Art Commission', es: 'Encargo de Arte' },
+  },
+
   // Footer
   footer: {
     tagline: {

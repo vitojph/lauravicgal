@@ -5,6 +5,7 @@ import Footer from '../components/common/Footer.astro';
 import Hero from '../components/home/Hero.astro';
 import ServicesPreview from '../components/home/ServicesPreview.astro';
 import Button from '../components/common/Button.astro';
+import Testimonials from '../components/home/Testimonials.astro';
 import { translations } from '../i18n/translations';
 
 // For static build, default to English but render both languages
@@ -53,6 +54,8 @@ const t = translations;
         </div>
       </div>
     </section>
+
+    <Testimonials />
 
     <!-- CTA Section -->
     <section class="section-padding bg-gradient-to-br from-terracotta-500 via-terracotta-600 to-terracotta-700 text-white">
