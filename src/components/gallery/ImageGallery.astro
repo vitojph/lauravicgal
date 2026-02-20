@@ -11,26 +11,27 @@ const t = translations.gallery;
 
 // Placeholder images for the gallery
 const placeholderImages = [
-  { id: 1, category: 'weddings', aspect: 'portrait' },
-  { id: 2, category: 'workshops', aspect: 'landscape' },
+  { id: 1, category: 'ceremonies', aspect: 'portrait' },
+  { id: 2, category: 'art-workshops', aspect: 'landscape' },
   { id: 3, category: 'custom-artwork', aspect: 'square' },
-  { id: 4, category: 'wedding-art', aspect: 'portrait' },
-  { id: 5, category: 'weddings', aspect: 'landscape' },
-  { id: 6, category: 'workshops', aspect: 'portrait' },
-  { id: 7, category: 'custom-artwork', aspect: 'landscape' },
-  { id: 8, category: 'wedding-art', aspect: 'square' },
-  { id: 9, category: 'weddings', aspect: 'square' },
-  { id: 10, category: 'workshops', aspect: 'portrait' },
-  { id: 11, category: 'custom-artwork', aspect: 'portrait' },
-  { id: 12, category: 'wedding-art', aspect: 'landscape' },
+  { id: 4, category: 'cultural-events', aspect: 'portrait' },
+  { id: 5, category: 'dream-events', aspect: 'landscape' },
+  { id: 6, category: 'ceremonies', aspect: 'landscape' },
+  { id: 7, category: 'art-workshops', aspect: 'portrait' },
+  { id: 8, category: 'custom-artwork', aspect: 'landscape' },
+  { id: 9, category: 'cultural-events', aspect: 'square' },
+  { id: 10, category: 'dream-events', aspect: 'portrait' },
+  { id: 11, category: 'ceremonies', aspect: 'square' },
+  { id: 12, category: 'art-workshops', aspect: 'portrait' },
 ];
 
 const filters = [
   { key: 'all', label: t.filterAll[lang] },
-  { key: 'weddings', label: t.filterWeddings[lang] },
-  { key: 'workshops', label: t.filterWorkshops[lang] },
+  { key: 'ceremonies', label: t.filterCeremonies[lang] },
+  { key: 'art-workshops', label: t.filterArtWorkshops[lang] },
   { key: 'custom-artwork', label: t.filterCustomArtwork[lang] },
-  { key: 'wedding-art', label: t.filterWeddingArt[lang] },
+  { key: 'cultural-events', label: t.filterCulturalEvents[lang] },
+  { key: 'dream-events', label: t.filterDreamEvents[lang] },
 ];
 
 const aspectClasses = {
@@ -40,10 +41,11 @@ const aspectClasses = {
 };
 
 const categoryColors = {
-  'weddings': 'from-terracotta-100 to-terracotta-200',
-  'workshops': 'from-sage-100 to-sage-200',
+  'ceremonies': 'from-terracotta-100 to-terracotta-200',
+  'art-workshops': 'from-sage-100 to-sage-200',
   'custom-artwork': 'from-gold-100 to-gold-200',
-  'wedding-art': 'from-warm-100 to-warm-200',
+  'cultural-events': 'from-warm-100 to-warm-200',
+  'dream-events': 'from-terracotta-100 to-sage-200',
 };
 ---
 
