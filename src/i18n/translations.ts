@@ -173,14 +173,15 @@ export const translations = {
   gallery: {
     pageTitle: { en: 'Gallery', es: 'Galería' },
     pageSubtitle: {
-      en: 'Weddings, workshops, and custom artwork',
-      es: 'Bodas, talleres y arte personalizado'
+      en: 'Ceremonies, workshops, custom artwork, and events',
+      es: 'Ceremonias, talleres, arte personalizado y eventos'
     },
     filterAll: { en: 'All', es: 'Todo' },
-    filterWeddings: { en: 'Weddings', es: 'Bodas' },
-    filterWorkshops: { en: 'Workshops', es: 'Talleres' },
+    filterCeremonies: { en: 'Ceremonies', es: 'Ceremonias' },
+    filterArtWorkshops: { en: 'Art Workshops', es: 'Talleres de Arte' },
     filterCustomArtwork: { en: 'Custom Artwork', es: 'Arte Personalizado' },
-    filterWeddingArt: { en: 'Wedding + Art', es: 'Boda + Arte' },
+    filterCulturalEvents: { en: 'Cultural Events', es: 'Eventos Culturales' },
+    filterDreamEvents: { en: 'Dream Events', es: 'Eventos Soñados' },
   },
 
   // About Page
