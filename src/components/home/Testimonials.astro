@@ -7,6 +7,7 @@ const testimonials = [
   { quote: t.quote1, author: t.author1, context: t.context1 },
   { quote: t.quote2, author: t.author2, context: t.context2 },
   { quote: t.quote3, author: t.author3, context: t.context3 },
+  { quote: t.quote4, author: t.author4, context: t.context4 },
 ];
 ---
 
@@ -20,7 +21,7 @@ const testimonials = [
       <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 mx-auto rounded-full"></div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       {testimonials.map((item) => (
         <div class="bg-white rounded-xl p-8 shadow-sm">
           <svg class="w-8 h-8 text-terracotta-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
