@@ -225,23 +225,29 @@ export const translations = {
       es: 'Lo Que Dicen los Participantes'
     },
     quote1: {
-      en: 'The watercolor workshop was such a magical experience. Laura creates a warm, welcoming space where everyone feels like an artist.',
-      es: 'El taller de acuarela fue una experiencia mágica. Laura crea un espacio cálido y acogedor donde todos se sienten artistas.'
+      en: 'The way you weave language, culture, and artistic expression together creates a learning environment that is engaging, joyful, and impactful.',
+      es: 'La forma en que entrelazas el idioma, la cultura y la expresión artística crea un ambiente de aprendizaje atractivo, alegre e impactante.'
     },
-    author1: { en: 'Sarah M.', es: 'Sarah M.' },
-    context1: { en: 'Workshop Participant', es: 'Participante de Taller' },
+    author1: { en: 'Ms. Fasolino', es: 'Ms. Fasolino' },
+    context1: { en: 'District Supervisor of Fine Arts and Programming', es: 'Supervisora de Bellas Artes y Programación del Distrito' },
     quote2: {
-      en: 'Laura officiated our bilingual ceremony and it was absolutely perfect. She captured the essence of our love story beautifully.',
-      es: 'Laura ofició nuestra ceremonia bilingüe y fue absolutamente perfecta. Capturó la esencia de nuestra historia de amor de manera hermosa.'
+      en: 'It was an incredible event! Thank you for making me feel like an artist. It\'s wonderful that you share this with others. I loved it.',
+      es: '¡Fue un evento increíble! Gracias por hacerme sentir como una artista. Es maravilloso que compartas esto con otros. Me encantó.'
     },
-    author2: { en: 'María & James', es: 'María & James' },
-    context2: { en: 'Wedding Clients', es: 'Clientes de Boda' },
+    author2: { en: 'Betsy', es: 'Betsy' },
+    context2: { en: 'Themed watercolor event participant', es: 'Participante de evento temático de acuarela' },
     quote3: {
-      en: 'The custom portrait Laura painted of our family is our most treasured possession. Her attention to detail is extraordinary.',
-      es: 'El retrato personalizado que Laura pintó de nuestra familia es nuestro bien más preciado. Su atención al detalle es extraordinaria.'
+      en: 'My daughter attended watercolor class with Ms. Laura, and she really enjoyed the class. Her technique and artistic sense have improved a lot. Furthermore, each workshop was uniquely organized to let the kid have fun, learn, and practice watercolor at the same time. Ms. Laura was dedicated and loved by the kid.',
+      es: 'Mi hija asistió a clases de acuarela con Ms. Laura y realmente disfrutó la clase. Su técnica y sentido artístico han mejorado mucho. Además, cada taller estuvo organizado de forma única para permitir que la niña se divierta, aprenda y practique acuarela al mismo tiempo. Ms. Laura fue dedicada y querida por la niña.'
     },
-    author3: { en: 'The Rivera Family', es: 'La Familia Rivera' },
-    context3: { en: 'Art Commission', es: 'Encargo de Arte' },
+    author3: { en: 'Son', es: 'Son' },
+    context3: { en: '8-year-old student\'s dad', es: 'Papá de estudiante de 8 años' },
+    quote4: {
+      en: 'Thank you for sharing your positive energy, creativity, and warmth with all of us.',
+      es: 'Gracias por compartir tu energía positiva, creatividad y calidez con todos nosotros.'
+    },
+    author4: { en: 'Mariel', es: 'Mariel' },
+    context4: { en: 'Themed watercolor event participant', es: 'Participante de evento temático de acuarela' },
   },
 
   // Blog
