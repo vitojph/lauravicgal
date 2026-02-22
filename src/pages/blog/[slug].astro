@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/common/Header.astro';
+import Footer from '../../components/common/Footer.astro';
+import { getCollection, render } from 'astro:content';
+import { translations } from '../../i18n/translations';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const t = translations.blog;
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const formatDateEs = (date: Date) =>
+  date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Layout
+  title={`${post.data.title} | Laura Vicente Blog`}
+  description={post.data.description}
+  image={post.data.image}
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <article class="section-padding">
+      <div class="container-narrow mx-auto max-w-3xl">
+        <!-- Back link -->
+        <a href="/blog" class="inline-flex items-center text-terracotta-600 hover:text-terracotta-700 font-medium mb-8 group">
+          <svg class="w-4 h-4 mr-1 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span data-lang-en>{t.backToBlog.en}</span>
+          <span data-lang-es class="hidden">{t.backToBlog.es}</span>
+        </a>
+
+        <!-- Post header -->
+        <header class="mb-10">
+          <time class="text-sm text-warm-500 font-medium">
+            <span data-lang-en>{formatDate(post.data.date)}</span>
+            <span data-lang-es class="hidden">{formatDateEs(post.data.date)}</span>
+          </time>
+          <h1 class="mt-2 mb-4">
+            <span data-lang-en>{post.data.title}</span>
+            <span data-lang-es class="hidden">{post.data.titleEs || post.data.title}</span>
+          </h1>
+          {post.data.image && (
+            <img
+              src={post.data.image}
+              alt={post.data.title}
+              class="w-full rounded-xl mt-6"
+            />
+          )}
+        </header>
+
+        <!-- Post body -->
+        <div class="prose">
+          <Content />
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <Footer lang="en" />
+</Layout>

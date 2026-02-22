@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import { getCollection } from 'astro:content';
+import { translations } from '../i18n/translations';
+
+const t = translations.blog;
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const formatDateEs = (date: Date) =>
+  date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Layout
+  title="Blog | Laura Vicente"
+  description="News, updates, and stories from Laura Vicente — watercolor artist, wedding officiant, and creative."
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <!-- Hero -->
+    <section class="relative py-20 md:py-32 watercolor-bg overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-10 -right-20 w-64 h-64 bg-terracotta-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -left-20 w-80 h-80 bg-sage-200/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container-wide mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="font-serif mb-6">
+            <span data-lang-en>{t.pageTitle.en}</span>
+            <span data-lang-es class="hidden">{t.pageTitle.es}</span>
+          </h1>
+          <p class="text-xl text-warm-600">
+            <span data-lang-en>{t.pageSubtitle.en}</span>
+            <span data-lang-es class="hidden">{t.pageSubtitle.es}</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts -->
+    <section class="section-padding">
+      <div class="container-narrow mx-auto">
+        {posts.length === 0 ? (
+          <p class="text-center text-warm-500 text-lg">
+            <span data-lang-en>{t.noPosts.en}</span>
+            <span data-lang-es class="hidden">{t.noPosts.es}</span>
+          </p>
+        ) : (
+          <div class="space-y-10">
+            {posts.map((post) => (
+              <article class="group">
+                <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="block rounded-2xl border border-warm-200 overflow-hidden hover:border-terracotta-300 hover:shadow-lg transition-all duration-300">
+                  {post.data.image && (
+                    <div class="aspect-[21/9] overflow-hidden">
+                      <img
+                        src={post.data.image}
+                        alt={post.data.title}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <div class="p-6 md:p-8">
+                    <time class="text-sm text-warm-500 font-medium">
+                      <span data-lang-en>{formatDate(post.data.date)}</span>
+                      <span data-lang-es class="hidden">{formatDateEs(post.data.date)}</span>
+                    </time>
+                    <h2 class="text-2xl md:text-3xl mt-2 mb-3 group-hover:text-terracotta-600 transition-colors">
+                      <span data-lang-en>{post.data.title}</span>
+                      <span data-lang-es class="hidden">{post.data.titleEs || post.data.title}</span>
+                    </h2>
+                    <p class="text-warm-600 leading-relaxed">
+                      <span data-lang-en>{post.data.description}</span>
+                      <span data-lang-es class="hidden">{post.data.descriptionEs || post.data.description}</span>
+                    </p>
+                    <span class="inline-block mt-4 text-terracotta-600 font-medium text-sm group-hover:underline">
+                      <span data-lang-en>{t.readMore.en} &rarr;</span>
+                      <span data-lang-es class="hidden">{t.readMore.es} &rarr;</span>
+                    </span>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
