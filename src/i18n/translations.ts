@@ -10,6 +10,7 @@ export const translations = {
     gallery: { en: 'Gallery', es: 'Galería' },
     about: { en: 'About', es: 'Sobre Mí' },
     contact: { en: 'Contact', es: 'Contacto' },
+    blog: { en: 'Blog', es: 'Blog' },
   },
 
   // Common
@@ -241,6 +242,21 @@ export const translations = {
     },
     author3: { en: 'The Rivera Family', es: 'La Familia Rivera' },
     context3: { en: 'Art Commission', es: 'Encargo de Arte' },
+  },
+
+  // Blog
+  blog: {
+    pageTitle: { en: 'Blog', es: 'Blog' },
+    pageSubtitle: {
+      en: 'News, updates, and stories',
+      es: 'Noticias, novedades e historias'
+    },
+    readMore: { en: 'Read more', es: 'Leer más' },
+    backToBlog: { en: 'Back to Blog', es: 'Volver al Blog' },
+    noPosts: {
+      en: 'No posts yet. Check back soon!',
+      es: 'Aún no hay publicaciones. ¡Vuelve pronto!'
+    },
   },
 
   // Footer

@@ -31,6 +31,21 @@ const workshops = defineCollection({
   }),
 });
 
+// Blog collection
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    titleEs: z.string().optional(),
+    date: z.date(),
+    description: z.string(),
+    descriptionEs: z.string().optional(),
+    image: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 // FAQ collection
 const faq = defineCollection({
   type: 'data',
@@ -48,4 +63,5 @@ export const collections = {
   ceremonies,
   workshops,
   faq,
+  blog,
 };

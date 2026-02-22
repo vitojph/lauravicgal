@@ -47,6 +47,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://lauravic
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
 
+    <!-- Netlify Identity Widget -->
+    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,6 +60,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://lauravic
   </head>
   <body class="min-h-screen flex flex-col">
     <slot />
+
+    <!-- Netlify Identity redirect -->
+    <script is:inline>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 
     <!-- Language toggle script -->
     <script is:inline>
