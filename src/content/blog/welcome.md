@@ -1,10 +1,13 @@
 ---
-title: "Welcome to My Blog!"
-titleEs: "¡Bienvenidos a Mi Blog!"
-date: 2026-02-21
-description: "Exciting news — I'm launching a blog to share my journey as an artist, officiant, and creative."
-descriptionEs: "Noticias emocionantes — lanzo un blog para compartir mi camino como artista, oficiante y creativa."
-tags: ["announcement"]
+title: Welcome to My Blog!
+titleEs: ¡Bienvenidos a Mi Blog!
+date: 2026-02-15
+description: Exciting news — I'm launching a blog to share my journey as an
+  artist, officiant, and creative.
+descriptionEs: Noticias emocionantes — lanzo un blog para compartir mi camino
+  como artista, oficiante y creativa.
+tags:
+  - announcement
 draft: false
 ---
 
