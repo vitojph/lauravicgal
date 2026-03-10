@@ -1,7 +1,7 @@
 ---
 title: Illustrations and character design for children's theaters
 titleEs: Ilustración y diseño de personajes para teatro infantil
-date: 2025-08-30
+date: 2026-03-09
 description: A space where I share my creative journey through art,
   storytelling, and cultural experiences. Here you’ll find reflections on
   watercolor, creative education, bilingual storytelling projects, and the
