@@ -49,6 +49,8 @@ Each session is thoughtfully designed to offer both creative learning and human 
 
 $120 for the full experience (2 sessions, all materials included)
 
+Early Bird Offer: $100 (until April 15)
+
 Spots are intentionally limited to keep the experience intimate. I would love to share this space with you.
 
 If you feel called to join, you can reserve your spot through the link or by reaching out directly.
