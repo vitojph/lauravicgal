@@ -42,8 +42,8 @@ export const translations = {
       es: 'Lo Que Ofrezco'
     },
     ceremoniesTitle: {
-      en: 'Wedding Ceremonies',
-      es: 'Ceremonias de Boda'
+      en: 'EnamorARTE',
+      es: 'EnamorARTE'
     },
     ceremoniesDesc: {
       en: 'Personalized bilingual ceremonies that honor your unique love story',
