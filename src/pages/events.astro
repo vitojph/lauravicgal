@@ -16,12 +16,54 @@ const sortedPackages = ceremonyPackages.sort((a, b) => a.data.order - b.data.ord
 
 // Symbolic rituals data
 const rituals = [
-  { name: t.sandCeremony, icon: 'hourglass', color: 'terracotta' },
-  { name: t.handfasting, icon: 'ribbon', color: 'gold' },
-  { name: t.treePlanting, icon: 'plant', color: 'sage' },
-  { name: t.timeCapsule, icon: 'box', color: 'terracotta' },
-  { name: t.redThread, icon: 'thread', color: 'gold' },
-  { name: t.enamorarte, icon: 'palette', color: 'sage' },
+  {
+    name: t.enamorarte,
+    color: 'sage',
+    description: {
+      en: 'A unique engagement ceremony where the couple paints a shared canvas together, guided by an officiant. This intimate moment symbolizes unity, creativity, and the beginning of their journey, expressing their love through art instead of words.',
+      es: 'Una ceremonia de compromiso única donde la pareja pinta un lienzo compartido, guiados por una oficiante. Este momento íntimo simboliza la unión, la creatividad y el comienzo de su camino, expresando su amor a través del arte en lugar de palabras.'
+    }
+  },
+  {
+    name: t.sandCeremony,
+    color: 'terracotta',
+    description: {
+      en: 'It is a symbolic ritual in which the couple pours different colored sands together, representing the joining of their lives, love, and families into a unified whole.',
+      es: 'Es un ritual simbólico en el que la pareja vierte arenas de distintos colores, representando la unión de sus vidas, su amor y sus familias en un todo compartido.'
+    }
+  },
+  {
+    name: t.handfasting,
+    color: 'gold',
+    description: {
+      en: 'The word derives from the Old Norse term “handfesta,” where you promise to love each other today, tomorrow, and forever.',
+      es: 'La palabra proviene del termino nórdico antiguo "handfesta", donde prometen amarse hoy, mañana y para siempre.'
+    }
+  },
+  {
+    name: t.treePlanting,
+    color: 'sage',
+    description: {
+      en: 'It is a symbolic ritual where the couple plants a tree or plant to represent the growth, strength, and care of their relationship.',
+      es: 'Es un ritual simbólico en el que la pareja planta un árbol o una planta para representar el crecimiento, la fortaleza y el cuidado de su relación.'
+    }
+  },
+  {
+    name: t.timeCapsule,
+    color: 'terracotta',
+    description: {
+      en: 'It is a symbolic ritual in which the couple places letters, notes, or meaningful objects into a capsule to be opened in the future. It represents their commitment, memories, and hopes for a shared life, creating a lasting treasure to revisit and celebrate their love over time.',
+      es: 'Es un ritual simbólico en el que la pareja guarda cartas, notas u objetos personales en una cápsula para abrirla en el futuro. Representa su compromiso, sus recuerdos y sus esperanzas de una vida compartida, creando un tesoro duradero para revisitar y celebrar su amor con el paso del tiempo.'
+    }
+  },
+  {
+    name: t.redThread,
+    color: 'gold',
+    description: {
+      en: 'It is a symbolic ritual rooted in East Asian folklore, particularly Chinese and Japanese traditions. During the ceremony, the couple ties a red string around their pinky fingers, symbolizing their unbreakable bond and the belief that fate has brought them together.',
+      es: 'Es un ritual simbólico con origen en el folclore de Asia oriental, especialmente en las tradiciones china y japonesa. Durante la ceremonia, la pareja ata un hilo rojo alrededor de sus dedos meñiques, simbolizando su vínculo irrompible y la creencia de que el destino los ha unido.'
+    }
+  },
 ];
 ---
 
@@ -104,9 +146,9 @@ const rituals = [
           </p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {rituals.map((ritual) => (
-            <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div class={`w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center ${
                 ritual.color === 'terracotta' ? 'bg-terracotta-100' :
                 ritual.color === 'gold' ? 'bg-gold-100' : 'bg-sage-100'
@@ -123,10 +165,14 @@ const rituals = [
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 class="text-sm font-medium text-warm-800">
+              <h3 class="text-lg font-medium text-warm-800 text-center">
                 <span data-lang="en">{ritual.name.en}</span>
                 <span data-lang="es" class="hidden">{ritual.name.es}</span>
               </h3>
+              <p class="mt-4 text-sm leading-6 text-warm-600 text-center">
+                <span data-lang="en">{ritual.description.en}</span>
+                <span data-lang="es" class="hidden">{ritual.description.es}</span>
+              </p>
             </div>
           ))}
         </div>
@@ -138,11 +184,11 @@ const rituals = [
       <div class="container-narrow mx-auto text-center">
         <h2 class="text-white text-3xl md:text-4xl font-serif">
           <span data-lang="en">Ready to Plan Your Perfect Ceremony?</span>
-          <span data-lang="es" class="hidden">Lista para Planificar tu Ceremonia Perfecta?</span>
+          <span data-lang="es" class="hidden">¿Listos para planificar la ceremonia perfecta?</span>
         </h2>
         <p class="mt-4 text-gold-100 text-lg max-w-2xl mx-auto">
           <span data-lang="en">Let's create a ceremony that truly reflects your love story. I can't wait to hear from you!</span>
-          <span data-lang="es" class="hidden">Creemos una ceremonia que realmente refleje tu historia de amor. No puedo esperar a saber de ti!</span>
+          <span data-lang="es" class="hidden">Creemos una ceremonia que realmente refleje tu historia de amor. ¡Estoy deseando saber de ti!</span>
         </p>
         <div class="mt-8">
           <Button href="/contact" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-gold-600">
