@@ -1,0 +1,19 @@
+{
+  "type": "private-kids",
+  "title": "Private Kids Workshops",
+  "titleEs": "Talleres Privados para Niños",
+  "description": "Small, intimate creative groups or pods with a playful blend of storytelling and watercolor.",
+  "descriptionEs": "Pequeños grupos creativos e íntimos con una combinación lúdica de narración y acuarela.",
+  "details": [
+    "Explore imaginative themes like magical animals, underwater worlds, storybook characters, and forest creatures",
+    "Perfect for playdates or homeschool groups",
+    "90-minute sessions"
+  ],
+  "detailsEs": [
+    "Explora temas imaginativos como animales mágicos, mundos submarinos, personajes de cuentos y criaturas del bosque",
+    "Perfecto para playdates o grupos de homeschool",
+    "Sesiones de 90 minutos"
+  ],
+  "icon": "academic-cap",
+  "order": 1
+}
