@@ -124,6 +124,10 @@ export const translations = {
       en: 'Experience the joy of creating with watercolors. Perfect for team building, private parties, or learning something new.',
       es: 'Experimenta la alegría de crear con acuarelas. Perfecto para team building, fiestas privadas o aprender algo nuevo.'
     },
+    introSecondary: {
+      en: 'Each experience can be thoughtfully adapted to your group’s interests, age range, and intention, whether you\'re celebrating, connecting, or simply creating together.',
+      es: 'Cada experiencia puede adaptarse cuidadosamente a los intereses, la edad y la intención de tu grupo, ya sea para celebrar, conectar o simplemente crear juntos.'
+    },
     teamBuilding: { en: 'Team Building', es: 'Team Building' },
     teamBuildingDesc: {
       en: 'Bring your team together for a creative, stress-relieving experience',

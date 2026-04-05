@@ -19,7 +19,7 @@ const ceremonies = defineCollection({
 const workshops = defineCollection({
   type: 'data',
   schema: z.object({
-    type: z.enum(['team-building', 'private', 'group']),
+    type: z.enum(['private-kids', 'art-birthday', 'family-art', 'mindful-adults']),
     title: z.string(),
     titleEs: z.string(),
     description: z.string(),

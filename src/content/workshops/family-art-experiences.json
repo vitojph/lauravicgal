@@ -1,0 +1,17 @@
+{
+  "type": "family-art",
+  "title": "Family Art Experiences",
+  "titleEs": "Experiencias Artísticas en Familia",
+  "description": "A meaningful space for parents and children to create together through storytelling and guided watercolor.",
+  "descriptionEs": "Un espacio significativo para que padres e hijos creen juntos a traves de la narración y la acuarela guiada.",
+  "details": [
+    "Collaborative artwork to share and take home",
+    "2-hour sessions"
+  ],
+  "detailsEs": [
+    "Obra colaborativa para compartir y llevar a casa",
+    "Sesiones de 2 horas"
+  ],
+  "icon": "users",
+  "order": 3
+}

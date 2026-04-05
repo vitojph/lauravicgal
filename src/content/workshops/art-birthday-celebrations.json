@@ -1,0 +1,19 @@
+{
+  "type": "art-birthday",
+  "title": "Art Birthday Celebrations",
+  "titleEs": "Celebraciones de Cumpleaños con Arte",
+  "description": "Creative, art-filled birthday experiences with a themed watercolor activity guided step by step.",
+  "descriptionEs": "Experiencias de cumpleaños creativas y llenas de arte con una actividad de acuarela temática guiada paso a paso.",
+  "details": [
+    "Optional collaborative artwork created especially for the birthday child",
+    "Themes include Fairies and Dragons, Ocean Creatures, Paint Your Magical Pet, and My Dream World",
+    "90-minute sessions"
+  ],
+  "detailsEs": [
+    "Obra colaborativa opcional creada especialmente para el cumpleañero o la cumpleañera",
+    "Temas como hadas y dragones, criaturas del océano, pinta tu mascota mágica y mi mundo soñado",
+    "Sesiones de 90 minutos"
+  ],
+  "icon": "heart",
+  "order": 2
+}
