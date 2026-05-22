@@ -1,6 +1,6 @@
 ---
-title: "ImmigrArt: Shaping the Soul Across Borders"
-titleEs: "ImmigrArt: Moldeando el alma a través de las fronteras"
+title: "ImmigrArt: Abbos"
+titleEs: "ImmigrArt: Abbos"
 date: 2026-05-22
 description: Emigrating is a journey of connections and disconnects—a profound
   process of leaving behind centuries of culture only to find ourselves
@@ -22,12 +22,20 @@ descriptionEs: "Emigrar es un viaje de conexiones y desconexiones: un proceso
 image: /images/blog/2.jpg
 draft: false
 ---
-Emigrating is not easy; it is a journey of connections and disconnects. Four years ago, I left my homeland, Spain, to start a new chapter in my family life in the US. The idea for ImmigrArt stems from a profound sense of gratitude for having spent these last four years surrounded by wonderful, culturally diverse people. Curiosity is what defines adaptation—wanting to learn about other cultures enriches your own even more. And through mutual respect, we can try to blend the essence of each one.
+Abbos was born in Tajikistan at a moment of great historical change, between the weight of ancient traditions and the collapse of the Soviet Union. His hometown, Konibodom - whose name means “the land of almonds” in Persian - is still alive in his memory through the image of almond trees blooming every spring, covering the city in delicate colors like Japanese sakura.
 
-The English-Speaking Union, the New York Public Library, and other organizations that have freely and generously offered me the chance to meet people from all corners of the world will remain in my heart forever.
 
-This project begins with Abbos, a very special person to me. I still remember those early conversations, struggling through broken English, yet we were able to understand and connect with each other. Now, almost without us realizing it, our coffee chats flow more and more naturally. He kicks off this ImmigrArt journey, which is a collection of graphic stories about people who have relocated many times. As he says, sometimes you are born in a place with centuries of culture, but under empires that disrupt the family order. Other times, it is a desire for change, but before you know it, you begin to be shaped by the sands of different places.
 
-Piece by piece, I will be drawing these stories, capturing a little piece of the soul of each participant in this project.
+Throughout his life, Abbos has rebuilt himself more than once. He moved from Tajikistan to Ukraine, then to Russia, and eventually to the United States. Each migration brought the same feeling: arriving as a stranger and slowly rediscovering himself in unfamiliar places. Over time, he learned to accept uncertainty as part of life’s rhythm, understanding that every closed door eventually leads to another opening. 
 
-Everything is done with my deepest respect for every single one of you.
+
+
+Today, Abbos lives what many would consider an ordinary life: work, family, and the routines of the city, but internally, he carries the perspective of someone who has lived between cultures and worlds. Trained as an engineer in Moscow, he now hopes to strengthen his English and continue his professional path in the United States.
+
+
+
+One symbol that deeply represents him is the Faravahar, an ancient emblem connected to wisdom, roots, and forward movement. For Abbos, it reflects the balance between honoring where we come from and continuing to move toward the future.
+
+
+
+Above all, he hopes others can recognize themselves in his story. Because beyond borders and countries, the experience of starting over, facing uncertainty, and searching for belonging is something deeply human and universal.
