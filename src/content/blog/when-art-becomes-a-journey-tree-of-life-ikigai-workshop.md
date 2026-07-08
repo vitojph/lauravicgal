@@ -1,10 +1,10 @@
 ---
-title: "When Art Becomes a Journey: Tree of Life & Ikigai Workshop"
+title: "The Tree of Life: An Artistic Journey of Reflection"
 titleEs: ""
 date: 2026-07-08
-description: Watercolor workshop about the Ikigai philosophy and the Tree of
-  Life for a group of educators of the Committee for Hispanic Children &
-  Families in Bronx (NY)
+description: A simple watercolor workshop became a journey of reflection,
+  purpose, and human connection. Discover how the Tree of Life and Ikigai
+  inspired a group of educators to reconnect with themselves.
 image: /images/blog/whatsapp-image-2026-07-07-at-14.46.00.jpeg
 draft: false
 ---
