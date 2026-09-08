@@ -21,21 +21,24 @@ descriptionEs: "Emigrar es un viaje de conexiones y desconexiones: un proceso
   todos."
 image: /images/blog/2.jpg
 draft: false
+blocks:
+  - type: text
+    text: |-
+      Abbos was born in Tajikistan at a moment of great historical change, between the weight of ancient traditions and the collapse of the Soviet Union. His hometown, Konibodom - whose name means “the land of almonds” in Persian - is still alive in his memory through the image of almond trees blooming every spring, covering the city in delicate colors like Japanese sakura.
+
+
+
+      Throughout his life, Abbos has rebuilt himself more than once. He moved from Tajikistan to Ukraine, then to Russia, and eventually to the United States. Each migration brought the same feeling: arriving as a stranger and slowly rediscovering himself in unfamiliar places. Over time, he learned to accept uncertainty as part of life’s rhythm, understanding that every closed door eventually leads to another opening. 
+
+
+
+      Today, Abbos lives what many would consider an ordinary life: work, family, and the routines of the city, but internally, he carries the perspective of someone who has lived between cultures and worlds. Trained as an engineer in Moscow, he now hopes to strengthen his English and continue his professional path in the United States.
+
+
+
+      One symbol that deeply represents him is the Faravahar, an ancient emblem connected to wisdom, roots, and forward movement. For Abbos, it reflects the balance between honoring where we come from and continuing to move toward the future.
+
+
+
+      Above all, he hopes others can recognize themselves in his story. Because beyond borders and countries, the experience of starting over, facing uncertainty, and searching for belonging is something deeply human and universal.
 ---
-Abbos was born in Tajikistan at a moment of great historical change, between the weight of ancient traditions and the collapse of the Soviet Union. His hometown, Konibodom - whose name means “the land of almonds” in Persian - is still alive in his memory through the image of almond trees blooming every spring, covering the city in delicate colors like Japanese sakura.
-
-
-
-Throughout his life, Abbos has rebuilt himself more than once. He moved from Tajikistan to Ukraine, then to Russia, and eventually to the United States. Each migration brought the same feeling: arriving as a stranger and slowly rediscovering himself in unfamiliar places. Over time, he learned to accept uncertainty as part of life’s rhythm, understanding that every closed door eventually leads to another opening. 
-
-
-
-Today, Abbos lives what many would consider an ordinary life: work, family, and the routines of the city, but internally, he carries the perspective of someone who has lived between cultures and worlds. Trained as an engineer in Moscow, he now hopes to strengthen his English and continue his professional path in the United States.
-
-
-
-One symbol that deeply represents him is the Faravahar, an ancient emblem connected to wisdom, roots, and forward movement. For Abbos, it reflects the balance between honoring where we come from and continuing to move toward the future.
-
-
-
-Above all, he hopes others can recognize themselves in his story. Because beyond borders and countries, the experience of starting over, facing uncertainty, and searching for belonging is something deeply human and universal.

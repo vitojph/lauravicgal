@@ -1,0 +1,18 @@
+---
+interface Props {
+  images: { image: string }[];
+  caption?: string;
+  postTitle: string;
+}
+
+const { images, caption, postTitle } = Astro.props;
+---
+
+<figure>
+  <div class="image-row" style={`--row-count: ${images.length}`}>
+    {images.map((item) => (
+      <img src={item.image} alt={postTitle} loading="lazy" />
+    ))}
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

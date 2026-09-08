@@ -13,18 +13,21 @@ descriptionEs: Tus historias de resiliencia, tus trayectorias y tus perspectivas
   trata de crear conexiones humanas a través de historias compartidas.
 image: /images/blog/mejorar-diseño-existente-3-.jpg
 draft: false
+blocks:
+  - type: text
+    text: |-
+      Every immigrant carries a universe of memories, transitions, losses, discoveries, and hope. 
+
+      With *ImmigrART*, I want to create a space where these stories can be transformed into watercolor and visual storytelling.
+
+      This project invites immigrants to share meaningful moments from their journey — memories that speak about identity, resilience, belonging, and cultural connection. Together, we will translate those experiences into a sequence of watercolor scenes that honor each personal narrative.
+
+      As an immigrant myself, I deeply believe in the power of storytelling through art. Every piece becomes a bridge between cultures, past and present.
+
+      * Participation is anonymous
+      * Share only what feels comfortable
+      * Your story matters
+
+      If you would like to participate, this is the link to the form:\
+      <https://forms.gle/GeyQg3xbD9LS33Ht9>
 ---
-Every immigrant carries a universe of memories, transitions, losses, discoveries, and hope. 
-
-With *ImmigrART*, I want to create a space where these stories can be transformed into watercolor and visual storytelling.
-
-This project invites immigrants to share meaningful moments from their journey — memories that speak about identity, resilience, belonging, and cultural connection. Together, we will translate those experiences into a sequence of watercolor scenes that honor each personal narrative.
-
-As an immigrant myself, I deeply believe in the power of storytelling through art. Every piece becomes a bridge between cultures, past and present.
-
-* Participation is anonymous
-* Share only what feels comfortable
-* Your story matters
-
-If you would like to participate, this is the link to the form:\
-<https://forms.gle/GeyQg3xbD9LS33Ht9>

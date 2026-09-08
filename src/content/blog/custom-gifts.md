@@ -7,7 +7,10 @@ description: Custom Gifts I love creating personalized pieces. If you have an
   to reach out. I’d be happy to chat and bring your idea to life.
 image: /images/blog/diseño-sin-título.png
 draft: false
----
-**Custom Gifts**
+blocks:
+  - type: text
+    text: |-
+      **Custom Gifts**
 
-I love creating personalized pieces. If you have an idea for a custom item or would like to place an order, please don’t hesitate to reach out. I’d be happy to chat and bring your idea to life.
+      I love creating personalized pieces. If you have an idea for a custom item or would like to place an order, please don’t hesitate to reach out. I’d be happy to chat and bring your idea to life.
+---
