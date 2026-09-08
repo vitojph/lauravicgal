@@ -67,6 +67,20 @@ const formatDateEs = (date: Date) =>
         <div class="prose">
           <Content />
         </div>
+
+        <!-- Additional images -->
+        {post.data.gallery && post.data.gallery.length > 0 && (
+          <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {post.data.gallery.map((item) => (
+              <img
+                src={item.src}
+                alt={post.data.title}
+                class="w-full aspect-square object-cover rounded-xl"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        )}
       </div>
     </article>
   </main>
