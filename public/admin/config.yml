@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+local_backend: true
+
 media_folder: "public/images/blog"
 public_folder: "/images/blog"
 
@@ -18,6 +20,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Description (Spanish)", name: "descriptionEs", widget: "string", required: false }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Additional Images", name: "gallery", widget: "list", required: false, field: { label: "Image", name: "src", widget: "image" } }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
