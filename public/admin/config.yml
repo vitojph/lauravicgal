@@ -47,7 +47,7 @@ collections:
             name: "image-row"
             widget: "object"
             fields:
-              - { label: "Images", name: "images", widget: "list", min: 2, max: 3, field: { label: "Image", name: "image", widget: "image" } }
+              - { label: "Images", name: "images", widget: "list", min: 2, max: 3, fields: [{ label: "Image", name: "image", widget: "image" }] }
               - { label: "Caption", name: "caption", widget: "string", required: false }
           - label: "Quote"
             name: "quote"
