@@ -31,6 +31,40 @@ const workshops = defineCollection({
   }),
 });
 
+// Blog content blocks
+const headingBlock = z.object({
+  type: z.literal('heading'),
+  level: z.enum(['h2', 'h3']).default('h2'),
+  text: z.string(),
+});
+const textBlock = z.object({
+  type: z.literal('text'),
+  text: z.string(),
+});
+const imageBlock = z.object({
+  type: z.literal('image'),
+  image: z.string(),
+  alt: z.string().optional(),
+  caption: z.string().optional(),
+});
+const imageRowBlock = z.object({
+  type: z.literal('image-row'),
+  images: z.array(z.object({ image: z.string() })).min(2).max(3),
+  caption: z.string().optional(),
+});
+const quoteBlock = z.object({
+  type: z.literal('quote'),
+  text: z.string(),
+  attribution: z.string().optional(),
+});
+const blockSchema = z.discriminatedUnion('type', [
+  headingBlock,
+  textBlock,
+  imageBlock,
+  imageRowBlock,
+  quoteBlock,
+]);
+
 // Blog collection
 const blog = defineCollection({
   type: 'content',
@@ -41,7 +75,7 @@ const blog = defineCollection({
     description: z.string(),
     descriptionEs: z.string().optional(),
     image: z.string().optional(),
-    gallery: z.array(z.object({ src: z.string() })).optional(),
+    blocks: z.array(blockSchema).optional(),
     tags: z.array(z.string()).optional(),
     draft: z.boolean().default(false),
   }),

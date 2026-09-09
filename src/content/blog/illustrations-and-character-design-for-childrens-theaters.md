@@ -9,5 +9,8 @@ description: A space where I share my creative journey through art,
 descriptionEs: ""
 image: /images/blog/diseño-sin-título-1-.png
 draft: false
+blocks:
+  - type: text
+    text: |-
+      Some time ago, I had the great fortune of meeting Alejandra and learning about her bilingual storytelling show project. Collaborating with her on the creative side is something that truly excites me.  We bring beautiful Spanish stories to the stage through theatrical readings. Children enjoy them immensely, and seeing their faces as they experience the magic of watching a story come to life is priceless.  I will keep you posted about upcoming projects.
 ---
-Some time ago, I had the great fortune of meeting Alejandra and learning about her bilingual storytelling show project. Collaborating with her on the creative side is something that truly excites me.  We bring beautiful Spanish stories to the stage through theatrical readings. Children enjoy them immensely, and seeing their faces as they experience the magic of watching a story come to life is priceless.  I will keep you posted about upcoming projects.

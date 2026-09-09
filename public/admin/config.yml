@@ -20,7 +20,40 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Description (Spanish)", name: "descriptionEs", widget: "string", required: false }
       - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Additional Images", name: "gallery", widget: "list", required: false, field: { label: "Image", name: "src", widget: "image" } }
+      - label: "Content Blocks"
+        name: "blocks"
+        widget: "list"
+        required: false
+        types:
+          - label: "Heading"
+            name: "heading"
+            widget: "object"
+            fields:
+              - { label: "Level", name: "level", widget: "select", options: ["h2", "h3"], default: "h2" }
+              - { label: "Text", name: "text", widget: "string" }
+          - label: "Text"
+            name: "text"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "markdown", buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"] }
+          - label: "Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt text", name: "alt", widget: "string", required: false }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+          - label: "Image Row (2-3 side by side)"
+            name: "image-row"
+            widget: "object"
+            fields:
+              - { label: "Images", name: "images", widget: "list", min: 2, max: 3, fields: [{ label: "Image", name: "image", widget: "image" }] }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+          - label: "Quote"
+            name: "quote"
+            widget: "object"
+            fields:
+              - { label: "Quote", name: "text", widget: "text" }
+              - { label: "Attribution", name: "attribution", widget: "string", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Body", name: "body", widget: "markdown" }

@@ -166,6 +166,23 @@
   @apply rounded-xl my-8;
 }
 
+.prose figcaption {
+  @apply text-sm text-warm-500 text-center -mt-6 mb-8;
+}
+
+.prose blockquote footer {
+  @apply not-italic text-sm text-warm-500 mt-2;
+}
+
+.prose .image-row {
+  @apply grid gap-4 my-8;
+  grid-template-columns: repeat(var(--row-count, 2), minmax(0, 1fr));
+}
+
+.prose .image-row img {
+  @apply my-0 aspect-square object-cover;
+}
+
 .prose hr {
   @apply border-warm-200 my-10;
 }

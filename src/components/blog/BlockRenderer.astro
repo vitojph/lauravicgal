@@ -1,0 +1,27 @@
+---
+import HeadingBlock from './blocks/HeadingBlock.astro';
+import TextBlock from './blocks/TextBlock.astro';
+import ImageBlock from './blocks/ImageBlock.astro';
+import ImageRowBlock from './blocks/ImageRowBlock.astro';
+import QuoteBlock from './blocks/QuoteBlock.astro';
+
+type Block =
+  | { type: 'heading'; level: 'h2' | 'h3'; text: string }
+  | { type: 'text'; text: string }
+  | { type: 'image'; image: string; alt?: string; caption?: string }
+  | { type: 'image-row'; images: { image: string }[]; caption?: string }
+  | { type: 'quote'; text: string; attribution?: string };
+
+interface Props {
+  block: Block;
+  postTitle: string;
+}
+
+const { block, postTitle } = Astro.props;
+---
+
+{block.type === 'heading' && <HeadingBlock level={block.level} text={block.text} />}
+{block.type === 'text' && <TextBlock text={block.text} />}
+{block.type === 'image' && <ImageBlock image={block.image} alt={block.alt} caption={block.caption} postTitle={postTitle} />}
+{block.type === 'image-row' && <ImageRowBlock images={block.images} caption={block.caption} postTitle={postTitle} />}
+{block.type === 'quote' && <QuoteBlock text={block.text} attribution={block.attribution} />}

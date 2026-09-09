@@ -20,37 +20,40 @@ descriptionEs: ✨ Experiencia de Acuarela de Primavera 🌸 Me encanta invitart
   placer de expresarte a través del color, el agua y una guía suave.
 image: /images/blog/bloom-flow-spring-watercolor-nights-2-.png
 draft: false
+blocks:
+  - type: text
+    text: |-
+      ### ✨ Spring Watercolor Experience 🌸
+
+      I’m delighted to invite you to a special evening experience designed to help you slow down, explore watercolor, and reconnect with your creativity in a meaningful way.
+
+      In the middle of our busy routines, this is a space to pause, breathe, and create—surrounded by a small, supportive group and a cozy, inspiring atmosphere.
+
+      No previous experience is needed. This is a beginner-friendly journey where there’s no pressure and no perfection—only the joy of expressing yourself through color, water, and gentle guidance.
+
+      ### ✨ What to Expect
+
+      Each session is thoughtfully designed to offer both creative learning and human connection:
+
+      🍷 You’re also welcome to bring your favorite drink—wine, tea, or something non-alcoholic—and turn the experience into your own creative ritual.
+
+      ### 📍 Event Details
+
+      **Location:** Little Linguists y Mas, Hoboken
+
+      **Dates:** Saturday, April 25
+
+      **Time:** 6:00 – 8:00 PM
+
+      **Group Size:** Limited to 10–12 participants to ensure a personalized experience
+
+      ### 🎟️ Investment
+
+      $50 for the full experience (all materials included)
+
+      Spots are intentionally limited to keep the experience intimate. I would love to share this space with you.
+
+      If you feel called to join, you can reserve your spot through the link or by reaching out directly.<https://luma.com/5trogfp2>
+
+      Let’s paint, connect, and welcome Spring together 💛
 ---
-### ✨ Spring Watercolor Experience 🌸
-
-I’m delighted to invite you to a special evening experience designed to help you slow down, explore watercolor, and reconnect with your creativity in a meaningful way.
-
-In the middle of our busy routines, this is a space to pause, breathe, and create—surrounded by a small, supportive group and a cozy, inspiring atmosphere.
-
-No previous experience is needed. This is a beginner-friendly journey where there’s no pressure and no perfection—only the joy of expressing yourself through color, water, and gentle guidance.
-
-### ✨ What to Expect
-
-Each session is thoughtfully designed to offer both creative learning and human connection:
-
-🍷 You’re also welcome to bring your favorite drink—wine, tea, or something non-alcoholic—and turn the experience into your own creative ritual.
-
-### 📍 Event Details
-
-**Location:** Little Linguists y Mas, Hoboken
-
-**Dates:** Saturday, April 25
-
-**Time:** 6:00 – 8:00 PM
-
-**Group Size:** Limited to 10–12 participants to ensure a personalized experience
-
-### 🎟️ Investment
-
-$50 for the full experience (all materials included)
-
-Spots are intentionally limited to keep the experience intimate. I would love to share this space with you.
-
-If you feel called to join, you can reserve your spot through the link or by reaching out directly.<https://luma.com/5trogfp2>
-
-Let’s paint, connect, and welcome Spring together 💛
