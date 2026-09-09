@@ -35,7 +35,7 @@ collections:
             name: "text"
             widget: "object"
             fields:
-              - { label: "Text", name: "text", widget: "markdown", buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"], editor_components: [] }
+              - { label: "Text", name: "text", widget: "markdown", buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"] }
           - label: "Image"
             name: "image"
             widget: "object"
