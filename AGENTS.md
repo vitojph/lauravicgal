@@ -5,6 +5,7 @@ This file is the project's committed home for project-intrinsic agent knowledge:
 - Add durable project-specific notes here as they are discovered through real work.
 - Blog editor: `src/content/blog/*.md` uses a block-based `blocks:` field (heading/text/image/image-row/quote), rendered via `src/components/blog/BlockRenderer.astro`. Schema lives in `src/content/config.ts`. Text blocks render markdown through `marked`.
 - Decap CMS admin lives at `/admin` (`public/admin/config.yml`, `local_backend: true`). To test locally: run `astro dev`, and run `npx decap-server` for the git-gateway proxy — pin `npx decap-server@3.10.0` (or another pre-3.11 version); `decap-server@3.11.1`'s package.json uses a pnpm `catalog:` dependency reference that plain `npm`/`npx` cannot resolve (`EUNSUPPORTEDPROTOCOL`).
+- In `config.yml`, a `list` widget nesting object fields must use `fields: [...]` (plural), not `field:` — the latter silently emits strings instead of objects, breaking the `image-row` block's Zod schema (`z.array(z.object(...))`). The `text` block's `markdown` widget must not set `editor_components: []`, which drops Rich Text content on save.
 - `sharp` (Astro's default image service) is an optional native dependency; if `npm install` silently fails to build it (no `node_modules/sharp`), run `npm install sharp --no-save` again — it typically succeeds on retry in this environment.
 
 ## Maintaining this file
