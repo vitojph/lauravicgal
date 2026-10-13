@@ -47,6 +47,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://lauravic
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
 
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-85JFJ4WT8S"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-85JFJ4WT8S');
+    </script>
+
     <!-- Netlify Identity Widget -->
     <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
