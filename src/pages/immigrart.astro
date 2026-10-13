@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import Button from '../components/common/Button.astro';
+import { translations } from '../i18n/translations';
+
+const t = translations.immigrart;
+
+const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScMuzimY5oz5_We8gfVAj40YWe8K3BSjogRhCQbsFI5HY7ktw/viewform';
+
+const stories = [
+  {
+    name: 'Abbos',
+    href: '/blog/immigrart-shaping-the-soul-across-borders/',
+    image: '/images/blog/2.jpg',
+    status: 'published',
+  },
+  {
+    name: 'Anastasiia',
+    href: '/blog/immigrart-anastasiia/',
+    image: '/images/blog/anastasiia.jpg',
+    status: 'published',
+  },
+  {
+    name: 'Danay',
+    href: null,
+    image: null,
+    status: 'in-progress',
+  },
+];
+---
+
+<Layout
+  title="ImmigrART | Laura Vicente"
+  description="ImmigrART is Laura Vicente's comic-style watercolor project. It shares inspiring stories of immigrant people in New York City."
+>
+  <Header lang="en" />
+
+  <main class="flex-grow">
+    <section class="relative py-20 md:py-32 watercolor-bg overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-10 -right-20 w-64 h-64 bg-terracotta-200/40 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -left-20 w-80 h-80 bg-sage-200/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container-narrow mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-warm-900">
+          <span data-lang="en">{t.pageTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageTitle.es}</span>
+        </h1>
+        <p class="mt-6 text-xl text-warm-700 leading-relaxed max-w-2xl mx-auto">
+          <span data-lang="en">{t.pageSubtitle.en}</span>
+          <span data-lang="es" class="hidden">{t.pageSubtitle.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white">
+      <div class="container-narrow mx-auto">
+        <h2>
+          <span data-lang="en">{t.whatTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.whatTitle.es}</span>
+        </h2>
+        <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 rounded-full"></div>
+        <p class="mt-8 text-lg text-warm-700 leading-relaxed">
+          <span data-lang="en">{t.whatText.en}</span>
+          <span data-lang="es" class="hidden">{t.whatText.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding bg-warm-50">
+      <div class="container-narrow mx-auto">
+        <h2>
+          <span data-lang="en">{t.whyTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.whyTitle.es}</span>
+        </h2>
+        <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 rounded-full"></div>
+        <p class="mt-8 text-lg text-warm-700 leading-relaxed">
+          <span data-lang="en">{t.whyText.en}</span>
+          <span data-lang="es" class="hidden">{t.whyText.es}</span>
+        </p>
+        <p class="mt-4 text-warm-600 leading-relaxed">
+          <span data-lang="en">{t.whyMe.en}</span>
+          <span data-lang="es" class="hidden">{t.whyMe.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white">
+      <div class="container-narrow mx-auto">
+        <h2>
+          <span data-lang="en">{t.howTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.howTitle.es}</span>
+        </h2>
+        <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 rounded-full"></div>
+        <p class="mt-8 text-lg text-warm-700 leading-relaxed">
+          <span data-lang="en">{t.howText.en}</span>
+          <span data-lang="es" class="hidden">{t.howText.es}</span>
+        </p>
+        <p class="mt-4 text-warm-600 leading-relaxed">
+          <span data-lang="en">{t.privacy.en}</span>
+          <span data-lang="es" class="hidden">{t.privacy.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding bg-warm-50">
+      <div class="container-narrow mx-auto">
+        <h2>
+          <span data-lang="en">{t.storiesTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.storiesTitle.es}</span>
+        </h2>
+        <div class="mt-4 w-24 h-1 bg-gradient-to-r from-terracotta-400 via-gold-400 to-sage-400 rounded-full"></div>
+        <p class="mt-8 text-lg text-warm-700 leading-relaxed">
+          <span data-lang="en">{t.storiesIntro.en}</span>
+          <span data-lang="es" class="hidden">{t.storiesIntro.es}</span>
+        </p>
+
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {stories.map((story) => {
+            const cardClass = 'block h-full rounded-2xl border border-warm-200 bg-white overflow-hidden';
+            const body = (
+              <>
+                {story.image ? (
+                  <div class="aspect-[4/3] overflow-hidden">
+                    <img src={story.image} alt={story.name} class="w-full h-full object-cover" />
+                  </div>
+                ) : (
+                  <div class="aspect-[4/3] bg-warm-100"></div>
+                )}
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-warm-900">{story.name}</h3>
+                  {story.status === 'published' ? (
+                    <span class="inline-block mt-3 text-terracotta-600 font-medium text-sm">
+                      <span data-lang="en">{t.readStory.en} &rarr;</span>
+                      <span data-lang="es" class="hidden">{t.readStory.es} &rarr;</span>
+                    </span>
+                  ) : (
+                    <span class="inline-block mt-3 text-warm-500 text-sm">
+                      <span data-lang="en">{t.inProgress.en}</span>
+                      <span data-lang="es" class="hidden">{t.inProgress.es}</span>
+                    </span>
+                  )}
+                </div>
+              </>
+            );
+
+            return story.href ? (
+              <a href={story.href} class={`${cardClass} hover:border-terracotta-300 hover:shadow-lg transition-all duration-300`}>
+                {body}
+              </a>
+            ) : (
+              <div class={cardClass}>
+                {body}
+              </div>
+            );
+          })}
+        </div>
+
+        <p class="mt-8 text-warm-600">
+          <span data-lang="en">{t.comingSoon.en}</span>
+          <span data-lang="es" class="hidden">{t.comingSoon.es}</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding bg-gradient-to-br from-sage-500 via-sage-600 to-sage-700 text-white">
+      <div class="container-narrow mx-auto text-center">
+        <h2 class="text-white text-3xl md:text-4xl font-serif">
+          <span data-lang="en">{t.ctaTitle.en}</span>
+          <span data-lang="es" class="hidden">{t.ctaTitle.es}</span>
+        </h2>
+        <p class="mt-4 text-sage-100 text-lg max-w-2xl mx-auto">
+          <span data-lang="en">{t.ctaText.en}</span>
+          <span data-lang="es" class="hidden">{t.ctaText.es}</span>
+        </p>
+        <div class="mt-8">
+          <Button href={formUrl} target="_blank" rel="noopener noreferrer" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-sage-600">
+            <span data-lang="en">{t.ctaButton.en}</span>
+            <span data-lang="es" class="hidden">{t.ctaButton.es}</span>
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
+
+<script>
+  function initLanguage() {
+    const lang = localStorage.getItem('lang') || 'en';
+    document.querySelectorAll('[data-lang]').forEach((el) => {
+      const elLang = el.getAttribute('data-lang');
+      if (elLang === lang) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+  initLanguage();
+  document.addEventListener('astro:page-load', initLanguage);
+</script>

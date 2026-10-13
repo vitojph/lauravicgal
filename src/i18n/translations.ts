@@ -11,6 +11,7 @@ export const translations = {
     about: { en: 'About', es: 'Sobre Mí' },
     contact: { en: 'Contact', es: 'Contacto' },
     blog: { en: 'Blog', es: 'Blog' },
+    immigrart: { en: 'ImmigrART', es: 'ImmigrART' },
   },
 
   // Common
@@ -267,6 +268,52 @@ export const translations = {
       en: 'No posts yet. Check back soon!',
       es: 'Aún no hay publicaciones. ¡Vuelve pronto!'
     },
+  },
+
+  // ImmigrART project page
+  immigrart: {
+    pageTitle: { en: 'ImmigrART', es: 'ImmigrART' },
+    pageSubtitle: {
+      en: 'Comic-style watercolor stories of immigrant people in New York City',
+      es: 'Historias en estilo de cómic, en acuarela, sobre personas inmigrantes en la ciudad de Nueva York'
+    },
+    whatTitle: { en: 'What it is', es: 'Qué es' },
+    whatText: {
+      en: 'ImmigrART is my graphic storytelling project. I capture and share, in comic style, inspiring stories of immigrant people I meet in New York City. Storytelling matters. These are watercolor stories about real people: a short sequence of scenes that holds a life.',
+      es: 'ImmigrART es mi proyecto de narración gráfica. Capturo y comparto, en estilo de cómic, historias inspiradoras de personas inmigrantes que conozco en la ciudad de Nueva York. La narración importa. Son historias de acuarela sobre personas reales: una breve secuencia de escenas que guarda una vida.'
+    },
+    whyTitle: { en: 'Why these stories', es: 'Por qué estas historias' },
+    whyText: {
+      en: 'The people in these stories arrived in New York City looking for a better and brighter future. They also keep roots in their original countries: language, food, culture, and a nostalgic view of childhood and the past.',
+      es: 'Las personas de estas historias llegaron a la ciudad de Nueva York en busca de un futuro mejor y más luminoso. También conservan raíces en sus países de origen: la lengua, la comida, la cultura y una mirada nostálgica a la infancia y al pasado.'
+    },
+    whyMe: {
+      en: 'I am an immigrant, a cultural program facilitator, and an event organizer. I arrived in New York with many dreams, a touch of nostalgia, and the desire to build new creative projects. From the beginning I was surrounded by immigrants, volunteers, community organizations, and generous people who foster the multicultural spirit of this city. Almost every week I meet someone new and hear the story of their journey. Their experiences, resilience, and perspectives inspire me. They are the reason ImmigrART exists.',
+      es: 'Soy inmigrante, facilitadora de programas culturales y organizadora de eventos. Llegué a Nueva York con muchos sueños, un toque de nostalgia y el deseo de construir nuevos proyectos creativos. Desde el principio estuve rodeada de personas inmigrantes, voluntarias, organizaciones comunitarias y gente generosa que alimenta el espíritu multicultural de esta ciudad. Casi cada semana conozco a alguien nuevo y escucho la historia de su viaje. Sus experiencias, su resiliencia y sus perspectivas me inspiran. Por ellas existe ImmigrART.'
+    },
+    howTitle: { en: 'How a story is made', es: 'Cómo se hace una historia' },
+    howText: {
+      en: 'A story is up to four watercolor scenes, from the country of origin to present life. Personal memories become a visual narrative that honors identity, transition, and belonging. Each piece is a bridge between cultures, between past and present, and between people in the community. The purpose is not only artistic, but human: to foster creativity, reflect on meaningful experiences, and build connections through shared stories.',
+      es: 'Una historia tiene hasta cuatro escenas en acuarela, desde el país de origen hasta la vida presente. Los recuerdos personales se vuelven una narrativa visual que honra la identidad, la transición y el sentido de pertenencia. Cada pieza es un puente entre culturas, entre el pasado y el presente, y entre las personas de la comunidad. El propósito no es solo artístico, sino humano: fomentar la creatividad, reflexionar sobre experiencias significativas y crear conexiones a través de historias compartidas.'
+    },
+    privacy: {
+      en: 'Participation is anonymous. A story shared for ImmigrART is artistic inspiration only. People share only what feels comfortable and meaningful.',
+      es: 'La participación es anónima. Una historia compartida para ImmigrART es solo inspiración artística. Cada persona comparte únicamente lo que le resulta cómodo y significativo.'
+    },
+    storiesTitle: { en: 'Stories', es: 'Historias' },
+    storiesIntro: {
+      en: 'Two stories are published. More stories are coming.',
+      es: 'Hay dos historias publicadas. Vendrán más historias.'
+    },
+    readStory: { en: 'Read the story', es: 'Leer la historia' },
+    inProgress: { en: 'In progress', es: 'En proceso' },
+    comingSoon: { en: 'More stories are coming.', es: 'Vendrán más historias.' },
+    ctaTitle: { en: 'Share your story', es: 'Comparte tu historia' },
+    ctaText: {
+      en: 'If you would like to take part, start with the participation form. It is how I begin collecting a person\'s background and personal story. Share only what feels comfortable.',
+      es: 'Si quieres participar, empieza con el formulario. Así empiezo a recoger el contexto y la historia personal de una persona. Comparte solo lo que te resulte cómodo.'
+    },
+    ctaButton: { en: 'Open the participation form', es: 'Abrir el formulario de participación' },
   },
 
   // Footer
