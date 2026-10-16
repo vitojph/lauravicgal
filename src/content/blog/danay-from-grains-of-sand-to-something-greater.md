@@ -4,7 +4,7 @@ titleEs: ""
 date: 2026-10-16
 description: A journey from Cuba across borders and cultures, exploring roots,
   freedom, human connection, and the meaning of belonging.
-image: /images/blog/danay-story-and-drawing.jpg
+image: /images/blog/danay-story-web.jpg
 blocks:
   - type: text
     text: >-
