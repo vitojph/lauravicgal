@@ -302,8 +302,8 @@ export const translations = {
     },
     storiesTitle: { en: 'Stories', es: 'Historias' },
     storiesIntro: {
-      en: 'Two stories are published. More stories are coming.',
-      es: 'Hay dos historias publicadas. Vendrán más historias.'
+      en: 'Three stories are published. More stories are coming.',
+      es: 'Hay tres historias publicadas. Vendrán más historias.'
     },
     readStory: { en: 'Read the story', es: 'Leer la historia' },
     inProgress: { en: 'In progress', es: 'En proceso' },
