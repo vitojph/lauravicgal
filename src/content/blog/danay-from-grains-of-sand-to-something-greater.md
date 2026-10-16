@@ -4,7 +4,7 @@ titleEs: ""
 date: 2026-10-16
 description: A journey from Cuba across borders and cultures, exploring roots,
   freedom, human connection, and the meaning of belonging.
-image: /images/blog/screenshot-2026-10-16-at-14.30.12.png
+image: /images/blog/screenshot-2026-10-16-at-14.38.59.png
 blocks:
   - type: text
     text: >-
