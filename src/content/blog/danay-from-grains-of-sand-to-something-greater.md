@@ -1,10 +1,10 @@
 ---
-title: "Danay: From grains of sand to something greater"
+title: "ImmigrART: From grains of sand to something greater"
 titleEs: ""
 date: 2026-10-16
 description: A journey from Cuba across borders and cultures, exploring roots,
   freedom, human connection, and the meaning of belonging.
-image: /images/blog/danay-from-grains-of-sand.jpg
+image: /images/blog/danay-story-web.jpg
 blocks:
   - type: text
     text: >-
