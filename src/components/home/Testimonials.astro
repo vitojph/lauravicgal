@@ -9,6 +9,11 @@ const testimonials = [
   { quote: t.quote3, author: t.author3, context: t.context3 },
   { quote: t.quote4, author: t.author4, context: t.context4 },
 ];
+
+const featured = {
+  quote: t.featuredQuote,
+  author: t.featuredAuthor,
+};
 ---
 
 <section class="section-padding bg-warm-50">
@@ -36,13 +41,31 @@ const testimonials = [
               <span data-lang="en">{item.author.en}</span>
               <span data-lang="es" class="hidden">{item.author.es}</span>
             </p>
-            <p class="text-sm text-warm-500">
-              <span data-lang="en">{item.context.en}</span>
-              <span data-lang="es" class="hidden">{item.context.es}</span>
-            </p>
+            {item.context && (
+              <p class="text-sm text-warm-500">
+                <span data-lang="en">{item.context.en}</span>
+                <span data-lang="es" class="hidden">{item.context.es}</span>
+              </p>
+            )}
           </div>
         </div>
       ))}
+    </div>
+
+    <div class="mt-8 bg-white rounded-xl p-8 shadow-sm">
+      <div class="max-w-3xl mx-auto">
+        <svg class="w-8 h-8 text-terracotta-300 mb-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
+        </svg>
+        <p class="text-warm-700 italic mb-6">
+          <span data-lang="en">{featured.quote.en}</span>
+          <span data-lang="es" class="hidden">{featured.quote.es}</span>
+        </p>
+        <p class="font-semibold text-warm-900">
+          <span data-lang="en">{featured.author.en}</span>
+          <span data-lang="es" class="hidden">{featured.author.es}</span>
+        </p>
+      </div>
     </div>
   </div>
 </section>
