@@ -253,6 +253,11 @@ export const translations = {
     },
     author4: { en: 'Mariel', es: 'Mariel' },
     context4: { en: 'Themed watercolor event participant', es: 'Participante de evento temático de acuarela' },
+    featuredQuote: {
+      en: 'We want to thank you especially for the wonderful art activity you led with our mothers, inspired by the Tree of Life. It was a very special experience that gave them a space to express themselves, reflect, and connect with their own stories, their strengths, and their dreams for their families. We are very grateful for the warmth and sensitivity with which you facilitated this activity and for the positive impact you brought to our event.',
+      es: 'Queremos agradecerte especialmente por la maravillosa actividad de arte que realizaste con nuestras madres, inspirada en el Árbol de la Vida. Fue una experiencia muy especial que les brindó un espacio para expresarse, reflexionar y conectar con sus propias historias, sus fortalezas y sus sueños para sus familias. Agradecemos mucho el cariño y la sensibilidad con los que facilitaste esta actividad y el impacto positivo que aportaste a nuestro evento.'
+    },
+    featuredAuthor: { en: 'CHCF Early Head Start Team', es: 'CHCF Early Head Start Team' },
   },
 
   // Blog
