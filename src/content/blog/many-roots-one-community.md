@@ -2,7 +2,7 @@
 title: "Many Roots: One Community"
 date: 2026-11-06
 description: Bringing Hispanic heritage and collaborative art to life at HoLa Hoboken
-image: /images/blog/whatsapp-image-2026-11-06-at-16.22.36.jpeg
+image: /images/blog/screenshot-2026-11-06-16.54.25.png
 blocks:
   - type: text
     text: >-
