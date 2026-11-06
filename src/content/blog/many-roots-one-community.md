@@ -21,5 +21,7 @@ blocks:
     image: /images/blog/whatsapp-image-2026-11-06-at-16.22.37-1-.jpeg
   - type: image
     image: /images/blog/whatsapp-image-2026-11-06-at-16.22.37.jpeg
+  - type: image
+    image: /images/blog/whatsapp-image-2026-11-06-at-16.57.42.jpeg
 draft: false
 ---
