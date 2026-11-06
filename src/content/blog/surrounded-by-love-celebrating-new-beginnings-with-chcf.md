@@ -19,5 +19,7 @@ blocks:
 
 
       I am so grateful to CHCF for inviting me to be a part of this heart-centered gathering. Supporting women as they build their families, honor their strength, and create lasting bonds with one another is at the very core of why community spaces matter so much.
+  - type: image
+    image: /images/blog/20261030_143918-collage.jpg
 draft: false
 ---
