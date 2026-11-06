@@ -19,5 +19,7 @@ blocks:
       Projects like this remind us that when we honor our diverse roots, we create something far stronger and more beautiful together. Let’s keep growing!
   - type: image
     image: /images/blog/whatsapp-image-2026-11-06-at-16.22.37-1-.jpeg
+  - type: image
+    image: /images/blog/whatsapp-image-2026-11-06-at-16.22.37.jpeg
 draft: false
 ---
